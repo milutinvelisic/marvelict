@@ -107,7 +107,7 @@ function proveraSearch(){
 
     let search = document.getElementById("search");
 
-    let regSearch = /^[A-z]{1,25}$/;
+    let regSearch = /^[A-z]{1,25}(\s)*$/;
 
     if(regSearch.test(search.value)){
         search.style.borderBottom = "2px solid #000"
