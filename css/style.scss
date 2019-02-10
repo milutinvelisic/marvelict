@@ -5,7 +5,10 @@
     padding: 0px;
     box-sizing: border-box;
   }
-
+// @font-face{
+//     font-family: "marvel";
+//     src: url("marvel-font/Marvel-Regular.ttf");
+// }
   .cleaner {
     clear: both;
   }
@@ -726,6 +729,7 @@
                 height: 100%;
                 margin: 0px auto;
                 display: flex;
+                flex-wrap: wrap;
                 justify-content: space-around;
                 background-color: #ffffff;
                 position: relative;
@@ -795,50 +799,51 @@
                         height: auto;
                         width: 175px;
                         position: relative;
+                        box-shadow: 0 16px 30px -8px rgba(0,0,0,.15);
                     }
 
-                    #mc1{
-                        background-image: url('../img/mc1.jpg');
-                        background-size: cover;
-                        background-repeat: no-repeat;
-                        width: 100%;
-                        height: 100%;
-                    }
-                    #mc2{
-                        background-image: url('../img/mc2.jpg');
-                        background-size: cover;
-                        background-repeat: no-repeat;
-                        width: 100%;
-                        height: 100%;
-                    }
-                    #mc3{
-                        background-image: url('../img/mc3.jpg');
-                        background-size: cover;
-                        background-repeat: no-repeat;
-                        width: 100%;
-                        height: 100%;
-                    }
-                    #mc4{
-                        background-image: url('../img/mc4.jpg');
-                        background-size: cover;
-                        background-repeat: no-repeat;
-                        width: 100%;
-                        height: 100%;
-                    }
-                    #mc5{
-                        background-image: url('../img/mc5.jpg');
-                        background-size: cover;
-                        background-repeat: no-repeat;
-                        width: 100%;
-                        height: 100%;
-                    }
-                    #mc6{
-                        background-image: url('../img/mc6.jpg');
-                        background-size: cover;
-                        background-repeat: no-repeat;
-                        width: 100%;
-                        height: 100%;
-                    }
+                    // #mc1{
+                    //     background-image: url('../img/mc1.jpg');
+                    //     background-size: cover;
+                    //     background-repeat: no-repeat;
+                    //     width: 100%;
+                    //     height: 100%;
+                    // }
+                    // #mc2{
+                    //     background-image: url('../img/mc2.jpg');
+                    //     background-size: cover;
+                    //     background-repeat: no-repeat;
+                    //     width: 100%;
+                    //     height: 100%;
+                    // }
+                    // #mc3{
+                    //     background-image: url('../img/mc3.jpg');
+                    //     background-size: cover;
+                    //     background-repeat: no-repeat;
+                    //     width: 100%;
+                    //     height: 100%;
+                    // }
+                    // #mc4{
+                    //     background-image: url('../img/mc4.jpg');
+                    //     background-size: cover;
+                    //     background-repeat: no-repeat;
+                    //     width: 100%;
+                    //     height: 100%;
+                    // }
+                    // #mc5{
+                    //     background-image: url('../img/mc5.jpg');
+                    //     background-size: cover;
+                    //     background-repeat: no-repeat;
+                    //     width: 100%;
+                    //     height: 100%;
+                    // }
+                    // #mc6{
+                    //     background-image: url('../img/mc6.jpg');
+                    //     background-size: cover;
+                    //     background-repeat: no-repeat;
+                    //     width: 100%;
+                    //     height: 100%;
+                    // }
                 }
             }
         }
@@ -960,51 +965,51 @@
                     #block10{
                         background-image: url("../img/avgblock9.jpg");
                     }
-                    #blockf41{
-                        background-image: url("../img/f4b1.jpg");
-                    }
-                    #blockf42{
-                        background-image: url("../img/f4b2.jpg");
-                    }
-                    #blockf43{
-                        background-image: url("../img/f4b3.jpg");
-                    }
-                    #blockf44{
-                        background-image: url("../img/f4b4.jpg");
-                    }
-                    #blockf45{
-                        background-image: url("../img/f4b5.jpg");
-                    }
-                    #blockf46{
-                        background-image: url("../img/f4b6.jpg");
-                    }
-                    #blockf47{
-                        background-image: url("../img/f4b7.jpg");
-                    }
-                    #gotgb1{
-                        background-image: url("../img/gotgb1.jpg");
-                    }
-                    #gotgb2{
-                        background-image: url("../img/gotgb2.jpg");
-                    }
-                    #gotgb3{
-                        background-image: url("../img/gotgb3.jpg");
-                    }
-                    #gotgb4{
-                        background-image: url("../img/gotgb4.jpg");
-                    }
-                    #gotgb5{
-                        background-image: url("../img/gotgb5.jpg");
-                    }
-                    #gotgb6{
-                        background-image: url("../img/gotgb6.jpg");
-                    }
-                    #gotgb7{
-                        background-image: url("../img/gotgb7.jpg");
-                    }
-                    #gotgb8{
-                        background-image: url("../img/gotgb8.jpg");
-                    }
+                    // #blockf41{
+                    //     background-image: url("../img/f4b1.jpg");
+                    // }
+                    // #blockf42{
+                    //     background-image: url("../img/f4b2.jpg");
+                    // }
+                    // #blockf43{
+                    //     background-image: url("../img/f4b3.jpg");
+                    // }
+                    // #blockf44{
+                    //     background-image: url("../img/f4b4.jpg");
+                    // }
+                    // #blockf45{
+                    //     background-image: url("../img/f4b5.jpg");
+                    // }
+                    // #blockf46{
+                    //     background-image: url("../img/f4b6.jpg");
+                    // }
+                    // #blockf47{
+                    //     background-image: url("../img/f4b7.jpg");
+                    // }
+                    // #gotgb1{
+                    //     background-image: url("../img/gotgb1.jpg");
+                    // }
+                    // #gotgb2{
+                    //     background-image: url("../img/gotgb2.jpg");
+                    // }
+                    // #gotgb3{
+                    //     background-image: url("../img/gotgb3.jpg");
+                    // }
+                    // #gotgb4{
+                    //     background-image: url("../img/gotgb4.jpg");
+                    // }
+                    // #gotgb5{
+                    //     background-image: url("../img/gotgb5.jpg");
+                    // }
+                    // #gotgb6{
+                    //     background-image: url("../img/gotgb6.jpg");
+                    // }
+                    // #gotgb7{
+                    //     background-image: url("../img/gotgb7.jpg");
+                    // }
+                    // #gotgb8{
+                    //     background-image: url("../img/gotgb8.jpg");
+                    // }
                 }
 
             }
@@ -1388,16 +1393,18 @@
       }
       .newsBlockContainer{
           width: 100%;
-          height: 400px;
+          height: auto;
           margin-top: 40px;
           position: relative;
           ul{
               display: flex;
+              flex-wrap: wrap;
               justify-content: space-around;
               li{
                   display: block;
-                  height: 160px;
+                  height: 320px;
                   width: 285px;
+                  margin: 10px 0px;
                   .newsBlockPhoto{
                     background-size: contain;
                     background-repeat: no-repeat;
@@ -1423,9 +1430,6 @@
                 }
               }
           }
-          .newsButton{
-              margin-top: 200px;
-          }
       }
   }
   #gallery{
@@ -1436,9 +1440,15 @@
           margin: 70px 0px;
           height: auto;
           width: 100%;
-        ul{
+        #ubaci{
             display: flex;
             justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        #ubacii{
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
         }
       }
   }
@@ -1861,6 +1871,10 @@
                         left: 0px;
                         bottom: 0px;
                     }
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
                 }
                 .boxInfo{
                     height: 26%;
@@ -1889,120 +1903,6 @@
                     }
                 }
             }
-            #box1{
-                background-image: url("../img/box1.jpg");
-                background-size: contain;
-                background-repeat: no-repeat;
-            }
-            #box2{
-                background-image: url("../img/box2.jpg");
-                background-size: contain;
-                background-repeat: no-repeat;
-            }
-            #box3{
-                background-image: url("../img/box3.jpg");
-                background-size: contain;
-                background-repeat: no-repeat;
-            }
-            #box4{
-                background-image: url("../img/box4.jpg");
-                background-size: contain;
-                background-repeat: no-repeat;
-            }
-            #box5{
-                background-image: url("../img/box5.jpg");
-                background-size: contain;
-                background-repeat: no-repeat;
-            }
-            #box6{
-                background-image: url("../img/box6.jpg");
-                background-size: contain;
-                background-repeat: no-repeat;
-            }
-            #box7{
-                background-image: url("../img/box7.jpg");
-                background-size: contain;
-                background-repeat: no-repeat;
-            }
-            #box8{
-                background-image: url("../img/box8.jpg");
-                background-size: contain;
-                background-repeat: no-repeat;
-            }
-            #box9{
-                background-image: url("../img/box9.jpg");
-                background-size: contain;
-                background-repeat: no-repeat;
-            }
-            #box10{
-                background-image: url("../img/box10.jpg");
-                background-size: contain;
-                background-repeat: no-repeat;
-            }
-            #box11{
-                background-image: url("../img/box11.jpg");
-                background-size: contain;
-                background-repeat: no-repeat;
-            }
-            #box12{
-                background-image: url("../img/box12.jpg");
-                background-size: contain;
-                background-repeat: no-repeat;
-            }
-            #box13{
-                background-image: url("../img/box13.jpg");
-                background-size: contain;
-                background-repeat: no-repeat;
-            }
-            #box14{
-                background-image: url("../img/box14.jpg");
-                background-size: contain;
-                background-repeat: no-repeat;
-            }
-            #box15{
-                background-image: url("../img/box15.jpg");
-                background-size: contain;
-                background-repeat: no-repeat;
-            }
-            #box16{
-                background-image: url("../img/box16.jpg");
-                background-size: contain;
-                background-repeat: no-repeat;
-            }
-            #box17{
-                background-image: url("../img/box17.jpg");
-                background-size: contain;
-                background-repeat: no-repeat;
-            }
-            #box18{
-                background-image: url("../img/box18.jpg");
-                background-size: contain;
-                background-repeat: no-repeat;
-            }
-            #box19{
-                background-image: url("../img/box19.jpg");
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-position-x: 50%;
-            }
-            #box20{
-                background-image: url("../img/box20.jpg");
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-position-y: 40%;
-            }
-            #box21{
-                background-image: url("../img/box21.jpg");
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-position-x: 100%;
-            }
-            #box22{
-                background-image: url("../img/box22.jpg");
-                background-size: cover;
-                background-repeat: no-repeat;
-            }
-
         }
     }
     #povratak{
@@ -2017,6 +1917,7 @@
         height: 270px;
         width: 175px;
         box-shadow: 0 16px 30px -8px rgba(0,0,0,.15);
+        margin: 40px 0px;
         .moviePhoto{
             overflow: hidden;
             height: auto;
@@ -2096,6 +1997,139 @@
     }
     .mt{
         padding-top: 10px;
+    }
+    #funkcije{
+        width: 100%;
+        height: 200px;
+        display: flex;
+        padding: 20px 75px 0px;
+        margin-bottom: -100px;
+        .searchBox{
+            width: 100%;
+            display: flex;
+            height: 50px;
+            span{
+                padding: 9px;
+                width: 10%;
+                font-size: 30px;
+                border-bottom: 2px solid #000;
+            }
+            input{
+                width: 90%;
+                border: none;
+                border-bottom: 2px solid #000;
+                padding-left: 10px;
+                font-size: 24px;
+                color: #000;
+                &::placeholder{
+                    color: #000;
+                    text-transform: uppercase;
+                }
+                &:focus{
+                    outline: none;
+                }
+            }
+        }
+        .sort{
+            width: 100%;
+            height: 50px;
+            #sort{
+                width: 120px;
+                height: 50px;
+                border: none;
+                outline: none;
+                text-transform: uppercase;
+                font-weight: bold;
+                float: right;
+                border-bottom: 2px solid #000;
+                option{
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    .popUp{
+        position: fixed;
+        top: 5%;
+        left: 5%;
+        width: 90%;
+        height: 90%;
+        background-color: #22262a;
+        border: 2px solid #eb2328;
+        z-index: 10000;
+        display: flex;
+        color: #fff;
+        .smallPopLeft{
+            width: 70%;
+            // background-color: blue;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            .smallPopText{
+                width: 100%;
+                height: 35%;
+                // background-color: yellow;
+                display: flex;
+                padding: 0px 25px;
+                align-items: center;
+            }
+            .smallPopRelatedMovies{
+                width: 100%;
+                height: 50%;
+                // background-color: purple;
+                padding: 20px 25px;
+                display: flex;
+                flex-direction: column;
+                p{
+                    margin-bottom: 15px;
+                    text-transform: capitalize;
+                }
+                .relatedMoviesPics{
+                    display: flex;
+                    img{
+                        min-width: 140px;
+                        max-width: 250px;
+                        margin: 0px 25px;
+                        &:nth-child(1){
+                            margin: 0px 25px 0px 0px;
+                        }
+                    }
+                    
+                }
+            }
+            .smallPopDate{
+                width: 100%;
+                height: 15%;
+                // background-color: rgb(0, 255, 234);
+                display: flex;
+                flex-direction: column;
+                text-align: left;
+                padding: 2.5% 0px 2% 25px;
+                .rdate{
+                    text-transform: capitalize;
+                    color: #c2c2c2;
+                }
+                .date{
+                    text-transform: capitalize;
+                }
+            }
+        }
+        .smallPopRight{
+            width: 30%;
+            // background-color: red;
+            height: 100%;
+            img{
+                height: 100%;
+                width: 100%;
+            }
+        }
+        span{
+            position: absolute;
+            top: 0%;
+            right: 0.5%;
+            font-size: 30px;
+            color: #eb2328;
+        }
     }
 }
 ::-webkit-scrollbar{

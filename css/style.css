@@ -877,6 +877,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   background-color: #ffffff;
@@ -960,54 +962,8 @@ body {
   height: auto;
   width: 175px;
   position: relative;
-}
-
-#wrapper #main #exploreCards #exloreCardsContainer ul .movieCards #mc1 {
-  background-image: url("../img/mc1.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-}
-
-#wrapper #main #exploreCards #exloreCardsContainer ul .movieCards #mc2 {
-  background-image: url("../img/mc2.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-}
-
-#wrapper #main #exploreCards #exloreCardsContainer ul .movieCards #mc3 {
-  background-image: url("../img/mc3.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-}
-
-#wrapper #main #exploreCards #exloreCardsContainer ul .movieCards #mc4 {
-  background-image: url("../img/mc4.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-}
-
-#wrapper #main #exploreCards #exloreCardsContainer ul .movieCards #mc5 {
-  background-image: url("../img/mc5.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-}
-
-#wrapper #main #exploreCards #exloreCardsContainer ul .movieCards #mc6 {
-  background-image: url("../img/mc6.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
+  -webkit-box-shadow: 0 16px 30px -8px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 16px 30px -8px rgba(0, 0, 0, 0.15);
 }
 
 #wrapper #main #avengers {
@@ -1161,66 +1117,6 @@ body {
 
 #wrapper #main #avengersFullContainer #avengersContainer .avengersContent .avengersContentRight #block10 {
   background-image: url("../img/avgblock9.jpg");
-}
-
-#wrapper #main #avengersFullContainer #avengersContainer .avengersContent .avengersContentRight #blockf41 {
-  background-image: url("../img/f4b1.jpg");
-}
-
-#wrapper #main #avengersFullContainer #avengersContainer .avengersContent .avengersContentRight #blockf42 {
-  background-image: url("../img/f4b2.jpg");
-}
-
-#wrapper #main #avengersFullContainer #avengersContainer .avengersContent .avengersContentRight #blockf43 {
-  background-image: url("../img/f4b3.jpg");
-}
-
-#wrapper #main #avengersFullContainer #avengersContainer .avengersContent .avengersContentRight #blockf44 {
-  background-image: url("../img/f4b4.jpg");
-}
-
-#wrapper #main #avengersFullContainer #avengersContainer .avengersContent .avengersContentRight #blockf45 {
-  background-image: url("../img/f4b5.jpg");
-}
-
-#wrapper #main #avengersFullContainer #avengersContainer .avengersContent .avengersContentRight #blockf46 {
-  background-image: url("../img/f4b6.jpg");
-}
-
-#wrapper #main #avengersFullContainer #avengersContainer .avengersContent .avengersContentRight #blockf47 {
-  background-image: url("../img/f4b7.jpg");
-}
-
-#wrapper #main #avengersFullContainer #avengersContainer .avengersContent .avengersContentRight #gotgb1 {
-  background-image: url("../img/gotgb1.jpg");
-}
-
-#wrapper #main #avengersFullContainer #avengersContainer .avengersContent .avengersContentRight #gotgb2 {
-  background-image: url("../img/gotgb2.jpg");
-}
-
-#wrapper #main #avengersFullContainer #avengersContainer .avengersContent .avengersContentRight #gotgb3 {
-  background-image: url("../img/gotgb3.jpg");
-}
-
-#wrapper #main #avengersFullContainer #avengersContainer .avengersContent .avengersContentRight #gotgb4 {
-  background-image: url("../img/gotgb4.jpg");
-}
-
-#wrapper #main #avengersFullContainer #avengersContainer .avengersContent .avengersContentRight #gotgb5 {
-  background-image: url("../img/gotgb5.jpg");
-}
-
-#wrapper #main #avengersFullContainer #avengersContainer .avengersContent .avengersContentRight #gotgb6 {
-  background-image: url("../img/gotgb6.jpg");
-}
-
-#wrapper #main #avengersFullContainer #avengersContainer .avengersContent .avengersContentRight #gotgb7 {
-  background-image: url("../img/gotgb7.jpg");
-}
-
-#wrapper #main #avengersFullContainer #avengersContainer .avengersContent .avengersContentRight #gotgb8 {
-  background-image: url("../img/gotgb8.jpg");
 }
 
 #wrapper #main #avengersFullContainer #avengersContainerSlider {
@@ -1668,7 +1564,7 @@ body {
 
 #wrapper #newsBlock .newsBlockContainer {
   width: 100%;
-  height: 400px;
+  height: auto;
   margin-top: 40px;
   position: relative;
 }
@@ -1677,14 +1573,17 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
 
 #wrapper #newsBlock .newsBlockContainer ul li {
   display: block;
-  height: 160px;
+  height: 320px;
   width: 285px;
+  margin: 10px 0px;
 }
 
 #wrapper #newsBlock .newsBlockContainer ul li .newsBlockPhoto {
@@ -1714,10 +1613,6 @@ body {
   margin: 5px 0px;
 }
 
-#wrapper #newsBlock .newsBlockContainer .newsButton {
-  margin-top: 200px;
-}
-
 #wrapper #gallery {
   width: 90%;
   height: auto;
@@ -1730,12 +1625,24 @@ body {
   width: 100%;
 }
 
-#wrapper #gallery .galleryRow ul {
+#wrapper #gallery .galleryRow #ubaci {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#wrapper #gallery .galleryRow #ubacii {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 #wrapper #footer {
@@ -2267,6 +2174,11 @@ body {
   bottom: 0px;
 }
 
+#wrapper .avengersContentSlider ul .sliderBox .boxPhoto img {
+  width: 100%;
+  height: 100%;
+}
+
 #wrapper .avengersContentSlider ul .sliderBox .boxInfo {
   height: 26%;
   width: 100%;
@@ -2299,141 +2211,6 @@ body {
   background-color: #eb2328;
 }
 
-#wrapper .avengersContentSlider ul #box1 {
-  background-image: url("../img/box1.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-#wrapper .avengersContentSlider ul #box2 {
-  background-image: url("../img/box2.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-#wrapper .avengersContentSlider ul #box3 {
-  background-image: url("../img/box3.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-#wrapper .avengersContentSlider ul #box4 {
-  background-image: url("../img/box4.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-#wrapper .avengersContentSlider ul #box5 {
-  background-image: url("../img/box5.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-#wrapper .avengersContentSlider ul #box6 {
-  background-image: url("../img/box6.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-#wrapper .avengersContentSlider ul #box7 {
-  background-image: url("../img/box7.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-#wrapper .avengersContentSlider ul #box8 {
-  background-image: url("../img/box8.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-#wrapper .avengersContentSlider ul #box9 {
-  background-image: url("../img/box9.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-#wrapper .avengersContentSlider ul #box10 {
-  background-image: url("../img/box10.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-#wrapper .avengersContentSlider ul #box11 {
-  background-image: url("../img/box11.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-#wrapper .avengersContentSlider ul #box12 {
-  background-image: url("../img/box12.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-#wrapper .avengersContentSlider ul #box13 {
-  background-image: url("../img/box13.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-#wrapper .avengersContentSlider ul #box14 {
-  background-image: url("../img/box14.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-#wrapper .avengersContentSlider ul #box15 {
-  background-image: url("../img/box15.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-#wrapper .avengersContentSlider ul #box16 {
-  background-image: url("../img/box16.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-#wrapper .avengersContentSlider ul #box17 {
-  background-image: url("../img/box17.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-#wrapper .avengersContentSlider ul #box18 {
-  background-image: url("../img/box18.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-#wrapper .avengersContentSlider ul #box19 {
-  background-image: url("../img/box19.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position-x: 50%;
-}
-
-#wrapper .avengersContentSlider ul #box20 {
-  background-image: url("../img/box20.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position-y: 40%;
-}
-
-#wrapper .avengersContentSlider ul #box21 {
-  background-image: url("../img/box21.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position-x: 100%;
-}
-
-#wrapper .avengersContentSlider ul #box22 {
-  background-image: url("../img/box22.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
 #wrapper #povratak {
   border: none;
   padding: 0px 40px;
@@ -2449,6 +2226,7 @@ body {
   width: 175px;
   -webkit-box-shadow: 0 16px 30px -8px rgba(0, 0, 0, 0.15);
           box-shadow: 0 16px 30px -8px rgba(0, 0, 0, 0.15);
+  margin: 40px 0px;
 }
 
 #wrapper .movieCards .moviePhoto {
@@ -2541,6 +2319,198 @@ body {
 
 #wrapper .mt {
   padding-top: 10px;
+}
+
+#wrapper #funkcije {
+  width: 100%;
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px 75px 0px;
+  margin-bottom: -100px;
+}
+
+#wrapper #funkcije .searchBox {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 50px;
+}
+
+#wrapper #funkcije .searchBox span {
+  padding: 9px;
+  width: 10%;
+  font-size: 30px;
+  border-bottom: 2px solid #000;
+}
+
+#wrapper #funkcije .searchBox input {
+  width: 90%;
+  border: none;
+  border-bottom: 2px solid #000;
+  padding-left: 10px;
+  font-size: 24px;
+  color: #000;
+}
+
+#wrapper #funkcije .searchBox input::-webkit-input-placeholder {
+  color: #000;
+  text-transform: uppercase;
+}
+
+#wrapper #funkcije .searchBox input:-ms-input-placeholder {
+  color: #000;
+  text-transform: uppercase;
+}
+
+#wrapper #funkcije .searchBox input::-ms-input-placeholder {
+  color: #000;
+  text-transform: uppercase;
+}
+
+#wrapper #funkcije .searchBox input::placeholder {
+  color: #000;
+  text-transform: uppercase;
+}
+
+#wrapper #funkcije .searchBox input:focus {
+  outline: none;
+}
+
+#wrapper #funkcije .sort {
+  width: 100%;
+  height: 50px;
+}
+
+#wrapper #funkcije .sort #sort {
+  width: 120px;
+  height: 50px;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  float: right;
+  border-bottom: 2px solid #000;
+}
+
+#wrapper #funkcije .sort #sort option {
+  font-weight: bold;
+}
+
+#wrapper .popUp {
+  position: fixed;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+  background-color: #22262a;
+  border: 2px solid #eb2328;
+  z-index: 10000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #fff;
+}
+
+#wrapper .popUp .smallPopLeft {
+  width: 70%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#wrapper .popUp .smallPopLeft .smallPopText {
+  width: 100%;
+  height: 35%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0px 25px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#wrapper .popUp .smallPopLeft .smallPopRelatedMovies {
+  width: 100%;
+  height: 50%;
+  padding: 20px 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#wrapper .popUp .smallPopLeft .smallPopRelatedMovies p {
+  margin-bottom: 15px;
+  text-transform: capitalize;
+}
+
+#wrapper .popUp .smallPopLeft .smallPopRelatedMovies .relatedMoviesPics {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#wrapper .popUp .smallPopLeft .smallPopRelatedMovies .relatedMoviesPics img {
+  min-width: 140px;
+  max-width: 250px;
+  margin: 0px 25px;
+}
+
+#wrapper .popUp .smallPopLeft .smallPopRelatedMovies .relatedMoviesPics img:nth-child(1) {
+  margin: 0px 25px 0px 0px;
+}
+
+#wrapper .popUp .smallPopLeft .smallPopDate {
+  width: 100%;
+  height: 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: left;
+  padding: 2.5% 0px 2% 25px;
+}
+
+#wrapper .popUp .smallPopLeft .smallPopDate .rdate {
+  text-transform: capitalize;
+  color: #c2c2c2;
+}
+
+#wrapper .popUp .smallPopLeft .smallPopDate .date {
+  text-transform: capitalize;
+}
+
+#wrapper .popUp .smallPopRight {
+  width: 30%;
+  height: 100%;
+}
+
+#wrapper .popUp .smallPopRight img {
+  height: 100%;
+  width: 100%;
+}
+
+#wrapper .popUp span {
+  position: absolute;
+  top: 0%;
+  right: 0.5%;
+  font-size: 30px;
+  color: #eb2328;
 }
 
 ::-webkit-scrollbar {
