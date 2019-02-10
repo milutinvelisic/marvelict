@@ -79,7 +79,7 @@ function gamesGalerija(games){
 
     let search = document.getElementById("search");
   
-    let regSearch = /^[A-z]{1,25}$/;
+    let regSearch = /^[A-z]{1,25}[':]*[A-z]*(\s)*[A-z]*(\s)*$/;
   
     if(regSearch.test(search.value)){
         search.style.borderBottom = "2px solid #000"
