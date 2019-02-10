@@ -5,6 +5,7 @@ window.onload = function(){
 
   var pozivanje = document.getElementById("signIn");
   pozivanje.addEventListener("click" , pozivanjeForme);
+
 }
 window.addEventListener("load", hederLista);
 window.addEventListener("load" , footerListe);
@@ -16,8 +17,8 @@ window.addEventListener("load" , slajderSlike);
 
 function hederLista(){
     
-  var niz=[ "explore.html",  "movies.html", "tv-shows.html", "games.html", ];
-  var niz1=[ "explore",  "movies", "tv shows", "games", ];
+  var niz=[ "explore.html",  "movies.html", "tv-shows.html", "games.html" ];
+  var niz1=[ "explore",  "movies", "tv shows", "games" ];
   
   var divLista = document.getElementById("headerDown");
   var ispis = "<ul class='HDList'>";
@@ -138,6 +139,7 @@ function slajderSlike(){
   }
 }
 
+
 $(document).ready(function(){
     
   slideShow();
@@ -191,5 +193,5 @@ $('#newsBlockNone').hide();
       $('.showmore').html('<h4>Show Less</h4>');
     }
 	});
-  
+
 });

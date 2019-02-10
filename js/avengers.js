@@ -101,3 +101,78 @@ function pozivanjeForme(){
     var headerForma = document.getElementById("headerForma");
     headerForma.style.display === 'none' ? headerForma.style.display='table' : headerForma.style.display='none';
 }
+$(document).ready(function(){
+
+    $.ajax({
+        url : "data/gotgAside.json",
+        method : "GET",
+        type : "json",
+        success: function (gotg) {
+            gotgAside(gotg);
+            
+        },
+        error: function (xhr, status, error) {
+            console.log(xhr);
+            console.log(status);
+            console.log(error);
+            
+        }
+      });
+
+      $.ajax({
+        url : "data/f4Aside.json",
+        method : "GET",
+        type : "json",
+        success: function (f4) {
+            f4Aside(f4);
+            
+        },
+        error: function (xhr, status, error) {
+            console.log(xhr);
+            console.log(status);
+            console.log(error);
+            
+        }
+      });
+
+    function gotgAside(gotg){
+
+        let html = "";
+        
+        for (const g of gotg) {
+            html += `
+                <li class="sliderBox">
+                    <div class="boxPhoto">
+                    <img src="${g.img}" alt="${g.alt}">
+                    </div>
+                    <div class="boxInfo">
+                    <h3>${g.name}</h3>
+                    </div>
+                </li>
+            `;
+        };
+    
+    document.getElementById("ubaciAside").innerHTML = html;
+    };
+
+    function f4Aside(f4){
+
+        let html = "";
+        
+        for (const f of f4) {
+            html += `
+                <li class="sliderBox">
+                    <div class="boxPhoto">
+                    <img src="${f.img}" alt="${f.alt}">
+                    </div>
+                    <div class="boxInfo">
+                    <h3>${f.name}</h3>
+                    </div>
+                </li>
+            `;
+        };
+    
+    document.getElementById("ubaciAside").innerHTML = html;
+    };
+
+});
