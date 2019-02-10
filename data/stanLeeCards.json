@@ -1,0 +1,30 @@
+[
+    {
+        "id" : 1,
+        "img" : "img/stanLeeCard.jpg",
+        "alt" : "stan lee pic 1",
+        "title" : "CULTURE AND LIFESTYLE",
+        "text" : "Comics, Film, And TV Luminaries Pay Tribute To Stan Lee"
+    },
+    {
+        "id" : 2,
+        "img" : "img/sliderCard1.jpg",
+        "alt" : "stan lee pic 2",
+        "title" : "comics",
+        "text" : "Stan Lee: the greatest characters"
+    },
+    {
+        "id" : 3,
+        "img" : "img/sliderCard2.jpg",
+        "alt" : "stan lee pic 3",
+        "title" : "comics",
+        "text" : "read this landmark stan lee comics for free"
+    },
+    {
+        "id" : 4,
+        "img" : "img/stanLeeCard1.png",
+        "alt" : "stan lee pic 4",
+        "title" : "comics",
+        "text" : "marvel pats tribute to stan lee"
+    }
+]

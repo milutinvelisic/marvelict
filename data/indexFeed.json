@@ -1,0 +1,38 @@
+[
+    {
+        "id" : 1,
+        "img" : "img/feedCardContentPic1.jpg",
+        "alt" : "feed 1",
+        "category" : "games",
+        "title" : "Download The 'Marvel's Spider-Man: Turf Wars' DLC Chapter Now",
+        "text" : "The second chapter of 'Marvel's Spider-Man: The City That Never Sleeps' DLC series is now available!",
+        "feedTime" : "32 min ago"
+    },
+    {
+        "id" : 2,
+        "img" : "img/feedCardContentPic2.png",
+        "alt" : "feed 2",
+        "category" : "comic",
+        "title" : "A New Beginning for Carnage",
+        "text" : " Prepare for Web of Venom: Carnage Born #1 with a look back at the first appearance of Cletus Kasady!",
+        "feedTime" : "15 hours ago"
+    },
+    {
+        "id" : 3,
+        "img" : "img/feedCardContentPic3.jpg",
+        "alt" : "feed 3",
+        "category" : "comic",
+        "title" : "Fantastic Four: Replacement Roundup",
+        "text" : "When one of the core four can't make it, they invite someone new to join the team!",
+        "feedTime" : "2 days ago"
+    },
+    {
+        "id" : 4,
+        "img" : "img/feedCardContentPic4.png",
+        "alt" : "feed 4",
+        "category" : "digital series",
+        "title" : "top 10 MCU fights",
+        "text" : "In this very special Marvel Top 10, we're counting down the most memorable movie melees. Watch the video above to see the following throwdowns in action!",
+        "feedTime" : "5 days ago"
+    }
+]

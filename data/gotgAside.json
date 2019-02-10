@@ -1,0 +1,38 @@
+[
+    {
+        "id" : 1,
+        "img" : "img/box13.jpg",
+        "alt" : "Star Lord",
+        "name" : "Peter Quill - Star Lord"
+    },
+    {
+        "id" : 2,
+        "img" : "img/box14.jpg",
+        "alt" : "Gamora",
+        "name" : "Gamora"
+    },
+    {
+        "id" : 3,
+        "img" : "img/box15.jpg",
+        "alt" : "Drax",
+        "name" : "Drax"
+    },
+    {
+        "id" : 4,
+        "img" : "img/box16.jpg",
+        "alt" : "Rocket",
+        "name" : "Rocket"
+    },
+    {
+        "id" : 5,
+        "img" : "img/box17.jpg",
+        "alt" : "Groot",
+        "name" : "Groot"
+    },
+    {
+        "id" : 6,
+        "img" : "img/box18.jpg",
+        "alt" : "Mantis",
+        "name" : "Mantis"
+    } 
+]

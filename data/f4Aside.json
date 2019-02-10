@@ -1,0 +1,26 @@
+[
+    {
+        "id" : 1,
+        "img" : "img/box19.jpg",
+        "alt" : "Mister Fantastic",
+        "name" : "Reed Richards"
+    },
+    {
+        "id" : 2,
+        "img" : "img/box20.jpg",
+        "alt" : "Invisible Woman",
+        "name" : "Susan Storm"
+    },
+    {
+        "id" : 3,
+        "img" : "img/box21.jpg",
+        "alt" : "Thing",
+        "name" : "Benjamin Grimm"
+    },
+    {
+        "id" : 4,
+        "img" : "img/box22.jpg",
+        "alt" : "Human Torch",
+        "name" : "Johnny Storm"
+    }
+]

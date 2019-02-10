@@ -1,0 +1,74 @@
+[
+    {
+        "id" : 1,
+        "img" : "img/box1.jpg",
+        "alt" : "Tony Stark",
+        "name" : "Tony Stark - Iron Man"
+    },
+    {
+        "id" : 2,
+        "img" : "img/box2.jpg",
+        "alt" : "Tony Stark",
+        "name" : "Steve Rogers - Captain America"
+    },
+    {
+        "id" : 3,
+        "img" : "img/box3.jpg",
+        "alt" : "Thor",
+        "name" : "Thor"
+    },
+    {
+        "id" : 4,
+        "img" : "img/box4.jpg",
+        "alt" : "The Hulk",
+        "name" : "Bruce Banner - The Hulk"
+    },
+    {
+        "id" : 5,
+        "img" : "img/box5.jpg",
+        "alt" : "Black Widow",
+        "name" : "Natasha Romanoff - Black Widow"
+    },
+    {
+        "id" : 6,
+        "img" : "img/box6.jpg",
+        "alt" : "Hawkeye",
+        "name" : "Clint Barton - Hawkeye"
+    },
+    {
+        "id" : 7,
+        "img" : "img/box7.jpg",
+        "alt" : "War Machine",
+        "name" : "James Rhodes - War Machine"
+    },
+    {
+        "id" : 8,
+        "img" : "img/box8.jpg",
+        "alt" : "Falcon",
+        "name" : "Sam Wilson - Falcon"
+    },
+    {
+        "id" : 9,
+        "img" : "img/box9.jpg",
+        "alt" : "Vision",
+        "name" : "Vision"
+    },
+    {
+        "id" : 10,
+        "img" : "img/box10.jpg",
+        "alt" : "Wanda Maximoff",
+        "name" : "Wanda Maximoff - Scarlet Witch"
+    },
+    {
+        "id" : 11,
+        "img" : "img/box11.jpg",
+        "alt" : "Spider-man",
+        "name" : "Peter Parker - Spider-man"
+    },
+    {
+        "id" : 12,
+        "img" : "img/box12.jpg",
+        "alt" : "Black Panther",
+        "name" : "T'Challa - Black Panther"
+    }
+]
