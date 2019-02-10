@@ -741,6 +741,7 @@
                     height: auto;
                     width: 280px;
                     display: flex;
+                    flex-wrap: wrap;
                     justify-content: space-around;
                     // box-shadow: 2px 2px 2px 2px;
                     a{
@@ -2094,7 +2095,7 @@
                             margin: 0px 25px 0px 0px;
                         }
                     }
-                    
+
                 }
             }
             .smallPopDate{
