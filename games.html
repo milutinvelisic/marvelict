@@ -18,7 +18,7 @@
          <div id="header">
             <div id="headerUp">
                <button id="signIn">
-                  <div>
+                  <div id="div">
                      <div class="logIn">
                         <img src="img/signincircle.PNG" alt="circle">
                      </div>
@@ -38,7 +38,7 @@
                   </ul>
                </div>
                <div id="logoDiv">
-                  <div>
+                  <div id="fixedlogo">
                      <a href="index.html">
                         <h1>marvel</h1>
                         <img src="img/marvellogo.png" alt="marvel logo" />
@@ -46,9 +46,8 @@
                   </div>
                </div>
                <div class="search">
-                  <a href="search.html">
-                     <div class="fa fa-search"></div>
-                  </a>
+                  <div class="logo2">MARVEL UNIVERSE</div>
+                  <div class="logo3">MARVEL</div>
                </div>
                <div class="cleaner"></div>
             </div>
@@ -71,6 +70,9 @@
                </div>
             </div>
          </div>
+         <div id="popUp">
+            <!-- Ucitano iz js -->
+        </div>
          <div id="newsBlock">
             <div id="movieNewsTitle">
                <h1>LATEST MOVIES NEWS</h1>
@@ -159,12 +161,18 @@
                <input type="text" name="search" id="search" placeholder="Search" class="search">
             </div>
             <div class="sort">
-               <select name="sort" id="sort">
+               <select name="sort" id="sort" class="sort11">
                   <option value="0">Sort by...</option>
                   <option value="latest">Latest</option>
                   <option value="oldest">Oldest</option>
                   <option value="a-z">A-Z</option>
                   <option value="z-a">Z-A</option>
+               </select>
+               <select name="filter" id="filter" class="sort1">
+                  <option value="0">Filter by...</option>
+                  <option value="phase1">Phase 1</option>
+                  <option value="phase2">Phase 2</option>
+                  <option value="phase3">Phase 3</option>
                </select>
             </div>
          </div>
@@ -242,7 +250,7 @@
          </div>
       </div>
       <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
-      <script src="js/tv-shows.js" type="text/javascript"></script>
+      <script src="js/gamesModule.js" type="text/javascript"></script>
       <script src="js/games.js" type="text/javascript"></script>
    </body>
 </html>
