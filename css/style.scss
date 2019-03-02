@@ -9,6 +9,71 @@
 //     font-family: "marvel";
 //     src: url("marvel-font/Marvel-Regular.ttf");
 // }
+
+$desktop: 1920px;
+$smaller-desktop: 1680px;
+$large-laptop: 1440px;
+$laptop: 1366px;
+$smaller-laptop: 1280px;
+$bigger-tablet: 1240px;
+$bigger-phone: 850px;
+$regular-phone: 650px;
+$medium-phone: 439px; // zasto se aktivira tek posle 39px
+$small-phone: 380px;
+
+@mixin desktop {
+    @media (min-width: #{$desktop}){
+        @content;
+    }
+}
+
+@mixin large-laptop{
+    @media (min-width: #{$large-laptop}){
+        @content;
+    }
+}
+
+@mixin smaller-desktop{
+    @media (min-width: #{$smaller-desktop}){
+        @content;
+    }
+}
+
+@mixin laptop{
+    @media (min-width:#{$smaller-laptop}) and (max-width: #{$laptop}){
+        @content;
+    }
+}
+
+@mixin tablet{
+    @media (max-width: #{$bigger-tablet}){
+        @content;
+    }
+}
+
+
+@mixin phone-tablet{
+    @media (min-width:#{$bigger-phone}) and (max-width: #{$bigger-tablet}){
+        @content;
+    }
+}
+@mixin phone-regular{
+    @media (max-width: #{$regular-phone}){
+        @content;
+    }
+}
+@mixin phone-medium{
+    @media (max-width: #{$medium-phone}){
+        @content;
+    }
+}
+
+@mixin phone-small{
+    @media (max-width: #{$small-phone}){
+        @content;
+    }
+}
+
   .cleaner {
     clear: both;
   }
@@ -29,6 +94,7 @@
   body {
     overflow-x: hidden;
     font-family: 'Poppins', sans-serif;
+    cursor: url("../img/cursor.svg"), auto;
     // background-color: #c3c3c3;
   }
 
@@ -48,6 +114,9 @@
         width: 89%;
         margin: 0px auto;
         display: flex;
+        @include phone-small{
+            margin: 0px 1%;
+        }
         button {
           border: none;
           background-color: #22262a;
@@ -55,7 +124,9 @@
           outline: none;
         }
         #signIn {
-          width: 150px;
+          width: auto;
+          min-width: 200px;
+          max-width: 300px;
           height: 50px;
           font-size: 15px;
           border-right: 1px solid #393939;
@@ -64,6 +135,12 @@
           justify-content: space-around;
           letter-spacing: 2px;
           position: relative;
+          @include phone-regular{
+              min-width: 120px;
+          }
+          @include phone-medium{
+            min-width: 100px;
+          }
           &:hover,
           &:active {
             background-color: #151515;
@@ -75,7 +152,7 @@
           background-color: #151515;
           transition: 0.3s ease;
         }
-        #signIn div {
+        #div {
           width: 100%;
           height: 100%;
           display: flex;
@@ -86,10 +163,11 @@
           color: #ffffff;
           font-size: 13px;
           font-weight: bold;
+          padding: 0px 10px;
           .logIn {
             width: 20px;
             height: 20px;
-            margin-left: 17px;
+            // margin-left: 17px;
             img{
                 width: 20px;
                 height: 20px;
@@ -107,6 +185,10 @@
             display: table;
             padding: 50px 60px 50px;
             z-index: 9999;
+            @include phone-medium{
+                width: 340px;
+                left: 0%;
+            }
             // transition: .3s ease;
             #hfLista{
                 display: table-cell;
@@ -133,6 +215,9 @@
                     padding-top: 9px;
                     text-align: center;
                     justify-content: space-around;
+                    @include phone-medium{
+                        padding-bottom: 5px;
+                    }
                     &:hover{
                         background-color: #c2c2c2;
                         cursor: pointer;
@@ -156,6 +241,9 @@
                     width: 100%;
                     height: 45px;
                     border: 2px solid #ffffff;
+                    @include phone-medium{
+                        height: 65px;
+                    }
                     &:hover{
                         border: 1px solid #c5c5c5;
                         background-color: #151515;
@@ -177,25 +265,53 @@
                         background-color: #ffffff;
                         content: "";
                         display: block;
-                        height: 10px;
+                        height: 5px;
                         position: absolute;
-                        transform: rotate(-40deg) ;
-                        width: 25px;
-                        left: -10px;
-                        top: -8.5px;
+                        -webkit-transform: rotate(-44.5deg);
+                        transform: rotate(-39.5deg);
+                        width: 20.5px;
+                        left: -12px;
+                        top: -1.5px;
                         border-style: solid;
+                        @include phone-medium{
+                            background-color: #ffffff;
+                            content: "";
+                            display: block;
+                            height: 8px;
+                            position: absolute;
+                            -webkit-transform: rotate(-44.5deg);
+                            transform: rotate(-56.5deg);
+                            width: 20.5px;
+                            left: -13.5px;
+                            top: 0.5px;
+                            border-style: solid;
+                        }
                     }
                     &:after{
                         background-color: #ffffff;
                         content: "";
                         display: block;
-                        height: 10px;
+                        height: 4px;
                         position: absolute;
-                        transform: rotate(-40deg) ;
+                        -webkit-transform: rotate(-44.5deg);
+                        transform: rotate(-39.5deg);
                         width: 25px;
-                        right: -9px;
-                        bottom: -8.5px;
+                        right: -10px;
+                        bottom: -2.5px;
                         border-style: solid;
+                        @include phone-medium{
+                            background-color: #ffffff;
+                            content: "";
+                            display: block;
+                            height: 3px;
+                            position: absolute;
+                            -webkit-transform: rotate(-44.5deg);
+                            transform: rotate(-57.5deg);
+                            width: 25px;
+                            right: -10px;
+                            bottom: -0.5px;
+                            border-style: solid;
+                        }
                     }
                 }
             }
@@ -204,12 +320,12 @@
           width: 100%;
           height: 50px;
           position: relative;
-          div {
-            width: 214px;
+          #fixedlogo {
+            width: 129px;
             margin: auto;
-            position: absolute;
-            left: 0;
-            right: 0;
+            position: relative;
+            left: 0px;
+            right: 0px;
             height: 52px;
             display: flex;
             justify-content: space-around;
@@ -220,18 +336,33 @@
         }
         .search {
           height: 50px;
-          width: 150px;
+          min-width: 200px;
+          max-width: 200px;
           float: right;
-          cursor: pointer;
           border-left: 1px solid #393939;
           border-right: 1px solid #393939;
           display: flex;
           align-items: center;
           justify-content: space-around;
           float: right;
-          .fa {
-            font-size: 20px;
-            color: #ffffff;
+          color: #fff;
+          @include phone-regular{
+            min-width: 120px;
+          }
+            @include phone-medium{
+                min-width: 100px;
+          }
+          .logo2{
+              display: block;
+              @include phone-regular{
+                display: none;
+            }
+          }
+          .logo3{
+              display: none;
+              @include phone-regular{
+                display: block;
+            }
           }
         }
       }
@@ -242,6 +373,8 @@
         width: 100%;
         .HDList {
           width: 30%;
+          min-width: 280px;
+          max-width: 310px;
           height: 40px;
           font-size: 12px;
           letter-spacing: 2px;
@@ -293,15 +426,34 @@
         //     height: 100%;
         //     background: linear-gradient(90deg,rgba(0,0,0,.95) 0,transparent);
         // }
+
+        @include large-laptop{
+            height: 500px;
+        }
+        @include smaller-desktop(){
+            height: 600px;
+        }
         .slideshow {
             position: relative;
             height: 100%;
+            @include large-laptop{
+                height: 500px;
+            }
+            @include smaller-desktop(){
+                height: 600px;
+            }
             .slide {
                 width: 100%;
                 height: 440px;
                 text-align: center;
                 background-size: cover;
                 background-position-y: 20%;
+                @include large-laptop{
+                    height: 500px;
+                }
+                @include smaller-desktop(){
+                    height: 600px;
+                }
                 //     &::before{
                 //     content: "";
                 //     position: absolute;
@@ -382,10 +534,16 @@
         height: 855px;
         background-color: #ffffff;
         padding: 10px 0px 0px;
+        @include tablet{
+            height: 650px;
+        }
         #stanLeeContainer{
             margin: 0 auto;
             width: 100%;
             height: 845px;
+            @include tablet{
+                height: 560px;
+            }
             #stanLeeContainerPic{
                 width: 100%;
                 height: 560px;
@@ -393,6 +551,9 @@
                 img{
                     width: 100%;
                     height: 560px;
+                    @include tablet{
+                        height: 520px;
+                    }
                 }
             }
             #stanLeeContainerSets{
@@ -401,6 +562,9 @@
                 margin: -60px auto 0px;
                 position: relative;
                 background-color: #ffffff;
+                @include tablet{
+                    display: none;
+                }
                 #stanLeeContainerSetsBlock{
                     padding: 20px;
                     width: 1180px;
@@ -411,10 +575,14 @@
                         height: auto;
                         #sliderSets{
                             display: flex;
+                            // justify-content: space-around;
+                            // flex-wrap: wrap;
                             width: 100%;
                             height: auto;
                             li{
-                                display: flex;
+                                // display: flex;
+                                width: 100%;
+
                                 .sliderSets{
                                     margin-right: 5px;
                                     margin-left: 5px;
@@ -425,7 +593,7 @@
                                         height: auto;
                                         a{
                                             .setPhoto{
-                                                width: 100%;
+                                                width: 80%;
                                                 height: 150px;
                                                 img{
                                                     width: 275px;
@@ -433,7 +601,7 @@
                                                 }
                                             }
                                             .setInfo{
-                                                width: 100%;
+                                                width: 80%;
                                                 height: 155px;
                                                 padding: 20px 10px 0px 0px;
                                                 h3{
@@ -468,6 +636,9 @@
         width: 100%;
         height: 100px;
         background-color: #ffffff;
+        @include tablet{
+            display: none;
+        }
     }
     #news{
         width: 100%;
@@ -479,6 +650,11 @@
             margin: 0px auto;
             padding: 0px 20px;
             display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            @include tablet{
+                width: auto;
+            }
             #newsContainerColumn{
                 width: 840px;
                 height: inherit;
@@ -576,6 +752,11 @@
                 height: 1128px;
                 padding-top: 100px;
                 margin-left: 50px;
+                @include tablet{
+                    width: 80%;
+                    margin-left: 0px;
+                    height: auto;
+                }
                 #newsContainerAsideContainer{
                     width: 100%;
                     height: 100%;
@@ -611,8 +792,16 @@
                         ul{
                             width: 100%;
                             height: auto;
+                            @include tablet{
+                                display: flex;
+                                justify-content: space-around;
+                                flex-wrap: wrap;
+                            }
                             li{
                                 border-bottom: 1px solid #e5e5e5;
+                                @include tablet{
+                                    width: 350px;
+                                }
                                 &:last-child{
                                     border-bottom: none;
                                 }
@@ -687,6 +876,7 @@
         background-repeat: no-repeat;
         background-position: 0% 30%;
         clip-path: polygon(0 0,0 99%,100% 89%,100% 0);
+        display: table;
         &::before{
             content: "";
             position: absolute;
@@ -696,11 +886,12 @@
             background: linear-gradient(90deg,rgba(0,0,0,.65) 0,transparent);
         }
         #exploreTitle{
+            display: table-cell;
+            vertical-align: middle;
             margin: 0px auto;
             text-align: center;
-            width: 80%;
-            padding-top: 150px;
             position: relative;
+            text-transform: uppercase;
             h1{
                 font-size: 50px;
                 letter-spacing: 2px;
@@ -737,7 +928,7 @@
                 margin-bottom: 20px;
                 .exploreCards{
                     display: block;
-                    margin: 0px 10px;
+                    margin: 5px 10px;
                     height: auto;
                     width: 280px;
                     display: flex;
@@ -871,6 +1062,12 @@
             width: 40%;
             padding-top: 150px;
             position: relative;
+            @include large-laptop{
+                padding-top: 18%;
+            }
+            @include smaller-desktop{
+                padding-top: 20%;
+            }
             h1{
                 font-size: 50px;
                 letter-spacing: 2px;
@@ -922,6 +1119,9 @@
                     p{
                         font-size: 13px;
                         margin-bottom: 60px;
+                        @include large-laptop {
+                            font-size: 17px;
+                        }
                     }
                     .avengersContentPic{
                         width: 460px;
@@ -966,51 +1166,51 @@
                     #block10{
                         background-image: url("../img/avgblock9.jpg");
                     }
-                    // #blockf41{
-                    //     background-image: url("../img/f4b1.jpg");
-                    // }
-                    // #blockf42{
-                    //     background-image: url("../img/f4b2.jpg");
-                    // }
-                    // #blockf43{
-                    //     background-image: url("../img/f4b3.jpg");
-                    // }
-                    // #blockf44{
-                    //     background-image: url("../img/f4b4.jpg");
-                    // }
-                    // #blockf45{
-                    //     background-image: url("../img/f4b5.jpg");
-                    // }
-                    // #blockf46{
-                    //     background-image: url("../img/f4b6.jpg");
-                    // }
-                    // #blockf47{
-                    //     background-image: url("../img/f4b7.jpg");
-                    // }
-                    // #gotgb1{
-                    //     background-image: url("../img/gotgb1.jpg");
-                    // }
-                    // #gotgb2{
-                    //     background-image: url("../img/gotgb2.jpg");
-                    // }
-                    // #gotgb3{
-                    //     background-image: url("../img/gotgb3.jpg");
-                    // }
-                    // #gotgb4{
-                    //     background-image: url("../img/gotgb4.jpg");
-                    // }
-                    // #gotgb5{
-                    //     background-image: url("../img/gotgb5.jpg");
-                    // }
-                    // #gotgb6{
-                    //     background-image: url("../img/gotgb6.jpg");
-                    // }
-                    // #gotgb7{
-                    //     background-image: url("../img/gotgb7.jpg");
-                    // }
-                    // #gotgb8{
-                    //     background-image: url("../img/gotgb8.jpg");
-                    // }
+                    #blockf41{
+                        background-image: url("../img/f4b1.jpg");
+                    }
+                    #blockf42{
+                        background-image: url("../img/f4b2.jpg");
+                    }
+                    #blockf43{
+                        background-image: url("../img/f4b3.jpg");
+                    }
+                    #blockf44{
+                        background-image: url("../img/f4b4.jpg");
+                    }
+                    #blockf45{
+                        background-image: url("../img/f4b5.jpg");
+                    }
+                    #blockf46{
+                        background-image: url("../img/f4b6.jpg");
+                    }
+                    #blockf47{
+                        background-image: url("../img/f4b7.jpg");
+                    }
+                    #gotgb1{
+                        background-image: url("../img/gotgb1.jpg");
+                    }
+                    #gotgb2{
+                        background-image: url("../img/gotgb2.jpg");
+                    }
+                    #gotgb3{
+                        background-image: url("../img/gotgb3.jpg");
+                    }
+                    #gotgb4{
+                        background-image: url("../img/gotgb4.jpg");
+                    }
+                    #gotgb5{
+                        background-image: url("../img/gotgb5.jpg");
+                    }
+                    #gotgb6{
+                        background-image: url("../img/gotgb6.jpg");
+                    }
+                    #gotgb7{
+                        background-image: url("../img/gotgb7.jpg");
+                    }
+                    #gotgb8{
+                        background-image: url("../img/gotgb8.jpg");
+                    }
                 }
 
             }
@@ -1084,6 +1284,12 @@
             width: 40%;
             padding-top: 150px;
             position: relative;
+            @include large-laptop{
+                padding-top: 18%;
+            }
+            @include smaller-desktop{
+                padding-top: 20%;
+            }
             h1{
                 font-size: 50px;
                 letter-spacing: 2px;
@@ -1120,8 +1326,14 @@
             margin: 0px 0px 0px 80px;
             text-align: left;
             width: 40%;
-            padding-top: 150px;
+            padding-top: 15%;
             position: relative;
+            @include large-laptop{
+                padding-top: 18%;
+            }
+            @include smaller-desktop{
+                padding-top: 20%;
+            }
             h1{
                 font-size: 50px;
                 letter-spacing: 2px;
@@ -1139,13 +1351,14 @@
         }
     }
     #mainMovies{
-        background-image: url("../img/mainmovies.jpg");
+        background-image: url("../img/mainmovies1.jpg");
         width: 100%;
         height: 63vh;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: 55% 30%;
         clip-path: polygon(0 0,0 99%,100% 89%,100% 0);
+        display: table;
         &::before{
             content: "";
             position: absolute;
@@ -1155,10 +1368,10 @@
             background: linear-gradient(90deg,rgba(0,0,0,.65) 0,transparent);
         }
         #moviesTitle{
+            display: table-cell;
+            vertical-align: middle;
             margin: 0px auto;
             text-align: center;
-            width: 80%;
-            padding-top: 150px;
             position: relative;
             text-transform: uppercase;
             h1{
@@ -1178,13 +1391,14 @@
         }
     }
     #mainShows{
-        background-image: url("../img/mainshows.jpg");
+        background-image: url("../img/mainshows1.jpg");
         width: 100%;
         height: 63vh;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: 55% 30%;
         clip-path: polygon(0 0,0 99%,100% 89%,100% 0);
+        display: table;
         &::before{
             content: "";
             position: absolute;
@@ -1194,10 +1408,10 @@
             background: linear-gradient(90deg,rgba(0,0,0,.65) 0,transparent);
         }
         #ShowsTitle{
+            display: table-cell;
+            vertical-align: middle;
             margin: 0px auto;
             text-align: center;
-            width: 80%;
-            padding-top: 150px;
             position: relative;
             text-transform: uppercase;
             h1{
@@ -1224,6 +1438,7 @@
         background-repeat: no-repeat;
         background-position: 55% 30%;
         clip-path: polygon(0 0,0 99%,100% 89%,100% 0);
+        display: table;
         &::before{
             content: "";
             position: absolute;
@@ -1233,10 +1448,10 @@
             background: linear-gradient(90deg,rgba(0,0,0,.65) 0,transparent);
         }
         #gamesTitle{
+            display: table-cell;
+            vertical-align: middle;
             margin: 0px auto;
             text-align: center;
-            width: 80%;
-            padding-top: 150px;
             position: relative;
             text-transform: uppercase;
             h1{
@@ -1316,6 +1531,9 @@
       width: 100%;
       height: 300px;
       background-color: #151515;
+      @include tablet{
+          display: none;
+      }
       a{
         #promoCardsContainer{
             display: grid;
@@ -1401,9 +1619,11 @@
               display: flex;
               flex-wrap: wrap;
               justify-content: space-around;
+              margin-bottom: 20px;
               li{
                   display: block;
-                  height: 320px;
+                  height: auto;
+                  min-height: 330px;
                   width: 285px;
                   margin: 10px 0px;
                   .newsBlockPhoto{
@@ -1435,6 +1655,7 @@
   }
   #gallery{
       width: 90%;
+      max-width: 1290px;
       height: auto;
       margin: 40px auto 70px;
       .galleryRow{
@@ -1465,17 +1686,22 @@
           width: 100%;
           height: auto;
           .main-footer-container{
-              width: 90%;
+              max-width: 1200px;
               height: auto;
               margin: 0px auto;
               padding: 0px 1em;
               display: flex;
-              justify-content: space-between;
+              justify-content: space-around;
+              flex-wrap: wrap;
               .footer-links{
-                width: 37%;
+                width: 33%;
                 height: auto;
                 display: flex;
                 justify-content: space-around;
+                @include tablet{
+                    width: 43%;
+
+                }
                 #footerMarvel{
                     display: block;
                     background-image: url('../img/footerMarvel.PNG');
@@ -1507,20 +1733,25 @@
                 }
               }
               .footer-promo-links{
-                width: 32%;
+                width: 33%;
                 height: auto;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-around;
+                @include tablet{
+                    width: 43%;
+                }
                 a{
                     display: flex;
                     justify-content: space-between;
                     #footer-promo-pic1{
+                        margin-right: 10px;
                         img{
                             height: 40px;
                         }
                     }
                     #footer-promo-pic2{
+                        margin-right: 10px;
                         img{
                             height: 45px;
                             width: 90px;
@@ -1539,9 +1770,12 @@
                 }
               }
               .footer-follow{
-                width: 25%;
+                width: 33%;
                 height: auto;
-                padding: 0em 3em;
+                padding: 0em 4em;
+                @include phone-tablet(){
+                    display: none;
+                }
                 .footer-follow-title{
                     color: #ffffff;
                     text-transform: uppercase;
@@ -1918,7 +2152,10 @@
         height: 270px;
         width: 175px;
         box-shadow: 0 16px 30px -8px rgba(0,0,0,.15);
-        margin: 40px 0px;
+        margin: 40px 5px;
+        &:hover{
+            cursor: pointer;
+        }
         .moviePhoto{
             overflow: hidden;
             height: auto;
@@ -1986,7 +2223,7 @@
         position:fixed;
         width: 50px;
         height: 75px;
-        bottom: 80px;
+        bottom: 177px;
         left: 30px;
         background: #000000;
         display: none;
@@ -2003,7 +2240,7 @@
         width: 100%;
         height: 200px;
         display: flex;
-        padding: 20px 75px 0px;
+        padding: 20px 8% 0px;
         margin-bottom: -100px;
         .searchBox{
             width: 100%;
@@ -2016,7 +2253,7 @@
                 border-bottom: 2px solid #000;
             }
             input{
-                width: 90%;
+                width: 70%;
                 border: none;
                 border-bottom: 2px solid #000;
                 padding-left: 10px;
@@ -2034,7 +2271,7 @@
         .sort{
             width: 100%;
             height: 50px;
-            #sort{
+            #sort, #filter{
                 width: 120px;
                 height: 50px;
                 border: none;
@@ -2050,6 +2287,7 @@
         }
     }
     .popUp{
+        display: block;
         position: fixed;
         top: 5%;
         left: 5%;
@@ -2060,16 +2298,15 @@
         z-index: 10000;
         display: flex;
         color: #fff;
+        font-size: 14px;
         .smallPopLeft{
-            width: 70%;
-            // background-color: blue;
+            width: 65%;
             height: 100%;
             display: flex;
             flex-direction: column;
             .smallPopText{
                 width: 100%;
                 height: 35%;
-                // background-color: yellow;
                 display: flex;
                 padding: 0px 25px;
                 align-items: center;
@@ -2077,7 +2314,6 @@
             .smallPopRelatedMovies{
                 width: 100%;
                 height: 50%;
-                // background-color: purple;
                 padding: 20px 25px;
                 display: flex;
                 flex-direction: column;
@@ -2101,7 +2337,6 @@
             .smallPopDate{
                 width: 100%;
                 height: 15%;
-                // background-color: rgb(0, 255, 234);
                 display: flex;
                 flex-direction: column;
                 text-align: left;
@@ -2116,8 +2351,7 @@
             }
         }
         .smallPopRight{
-            width: 30%;
-            // background-color: red;
+            width: 35%;
             height: 100%;
             img{
                 height: 100%;
