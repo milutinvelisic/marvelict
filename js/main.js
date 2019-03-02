@@ -6,12 +6,39 @@ window.onload = function(){
   var pozivanje = document.getElementById("signIn");
   pozivanje.addEventListener("click" , pozivanjeForme);
 
+  // var fixedlogo = document.querySelector("#fixedlogo");
+  // console.log(fixedlogo);
+
+  // var levo = (window.innerWidth-214)/2;
+  // var desno = (window.innerWidth-214)/2;
+
+  // fixedlogo.style.left = levo + "px";
+  // // fixedlogo.style.top = 0 + "px";
+  // fixedlogo.style.right = desno + "px";
+  // console.log(levo + " " + desno);
+  localStorage.getItem("username");
+  
+  
+  if(localStorage.getItem("username")){
+    document.getElementById("pozivanje").innerHTML = "WELCOME " +localStorage.getItem("username");
+    document.querySelector(".search .logo2").innerHTML = "<a href='index.html'>LOGOUT</a>";
+    document.querySelector(".search .logo3").innerHTML = "<a href='index.html'>LOGOUT</a>";
+    pozivanje.removeEventListener("click" , pozivanjeForme);
+  }
+  document.querySelector(".search .logo2").addEventListener("click" , function () {
+    localStorage.removeItem("username");
+  })
+
+  document.querySelector(".search .logo3").addEventListener("click" , function () {
+    localStorage.removeItem("username");
+  })
+  
 }
 window.addEventListener("load", hederLista);
 window.addEventListener("load" , footerListe);
 window.addEventListener("load" , footerInfoSlika);
-window.addEventListener("load" , slikeGalerije);
-window.addEventListener("load" , slikeGornjeGalerije);
+// window.addEventListener("load" , slikeGalerije);
+// window.addEventListener("load" , slikeGornjeGalerije);
 window.addEventListener("load" , slikeNewsBlock);
 window.addEventListener("load" , slajderSlike);
 
@@ -124,21 +151,22 @@ function slikeGornjeGalerije(){
   }
 }
 
-var elementiNizNews = document.querySelectorAll(".newsBlockPhoto");
+
 function slikeNewsBlock(){
-  var brojacSlika = 1;
-  for(var i = 0; i<elementiNizNews.length; i++){
+  let elementiNizNews = document.querySelectorAll(".newsBlockPhoto");
+  let brojacSlika = 1;
+  for(let i = 0; i<elementiNizNews.length; i++){
     elementiNizNews[i].style.backgroundImage= "url('img/nbc"+ (brojacSlika++) +".jpg')";
   }
 }
-var slajderBlok = document.querySelectorAll(".slide");
+
 function slajderSlike(){
-  var brojacSlika = 1;
-  for(var i = 0; i<slajderBlok.length; i++){
-    slajderBlok[i].style.backgroundImage= "url('img/slajder"+ (brojacSlika++) +".jpg')";
+  let slajderBlok = document.querySelectorAll(".slide");
+  let brojacSlika = 1;
+  for(let i = 0; i<slajderBlok.length; i++){
+    slajderBlok[i].style.backgroundImage= "url('img/slajder0"+ (brojacSlika++) +".jpg')";
   }
 }
-
 
 $(document).ready(function(){
     
@@ -146,8 +174,8 @@ $(document).ready(function(){
 function slideShow() {
   var trenutni = $('#novislajder .aktivna');
   var sledeci = trenutni.next().length ? trenutni.next() : trenutni.parent().children(':first');
-  trenutni.removeClass('aktivna').slideUp();
-  sledeci.addClass('aktivna').slideDown();
+  trenutni.removeClass('aktivna').fadeOut();
+  sledeci.addClass('aktivna').fadeIn();
   setTimeout(slideShow, 4000);
 } 
 

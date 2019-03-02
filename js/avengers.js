@@ -5,6 +5,22 @@ window.onload = function(){
 
     var pozivanje = document.getElementById("signIn");
     pozivanje.addEventListener("click" , pozivanjeForme);
+
+    localStorage.getItem("username");
+    
+    if(localStorage.getItem("username")){
+        document.getElementById("pozivanje").innerHTML = "WELCOME " +localStorage.getItem("username");
+    document.querySelector(".search .logo2").innerHTML = "<a href='index.html'>LOGOUT</a>";
+    document.querySelector(".search .logo3").innerHTML = "<a href='index.html'>LOGOUT</a>";
+    pozivanje.removeEventListener("click" , pozivanjeForme);
+    }
+    document.querySelector(".search .logo2").addEventListener("click" , function () {
+        localStorage.removeItem("username");
+      })
+    
+      document.querySelector(".search .logo3").addEventListener("click" , function () {
+        localStorage.removeItem("username");
+      })
 }
 window.addEventListener("load", hederLista);
 window.addEventListener("load" , footerListe);
