@@ -2,7 +2,7 @@ window.onload = function () {
 
     let url = window.location.href
 
-    if (url.indexOf("https: //milutinvelisic.github.io/marvelict/") != -1) {
+    if (url.indexOf("https://milutinvelisic.github.io/marvelict/") != -1) {
 
         hederLista()
         footerListe()
