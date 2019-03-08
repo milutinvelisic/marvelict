@@ -3176,7 +3176,7 @@ window.onload = function() {
 			let validnoPass = true;
 
 			let regUsername = /^[A-zšđčćž]{3,}(\d)*$/;
-			let regPassword = /^([a-zšđčćž](\d)*){6,}$/;
+			let regPassword = /^[a-z]{5,}(\d)+/;
 
 			if (regUsername.test(username.value)) {
 				document.getElementById('username-error').textContent = '';
