@@ -2432,11 +2432,13 @@ body {
   padding: 60px;
   padding-top: 0px;
   padding-bottom: 20px;
+  height: 100%;
 }
 
 #wrapper #logReg #formWrapper .formWrapperRight .formWraperRightContainer .formWraperRightContainerContent .signinContent {
   width: 100%;
   height: auto;
+  padding-top: 20px;
 }
 
 #wrapper #logReg #formWrapper .formWrapperRight .formWraperRightContainer .formWraperRightContainerContent .signinContent .signinContentTitle {
