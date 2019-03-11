@@ -466,6 +466,18 @@ body {
   }
 }
 
+@media (max-width: 950px) {
+  #wrapper #main #slajder {
+    height: 400px;
+  }
+}
+
+@media (max-width: 650px) {
+  #wrapper #main #slajder {
+    height: 300px;
+  }
+}
+
 #wrapper #main #slajder .slideshow {
   position: relative;
   height: 100%;
@@ -489,6 +501,7 @@ body {
   text-align: center;
   background-size: cover;
   background-position-y: 20%;
+  background-repeat: no-repeat;
 }
 
 @media (min-width: 1440px) {
@@ -500,6 +513,20 @@ body {
 @media (min-width: 1680px) {
   #wrapper #main #slajder .slideshow .slide {
     height: 600px;
+  }
+}
+
+@media (max-width: 950px) {
+  #wrapper #main #slajder .slideshow .slide {
+    height: 400px;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (max-width: 650px) {
+  #wrapper #main #slajder .slideshow .slide {
+    background-position-x: -50px;
+    height: 300px;
   }
 }
 
@@ -601,6 +628,18 @@ body {
   }
 }
 
+@media (max-width: 650px) {
+  #wrapper #main #stanLee {
+    height: 430px;
+  }
+}
+
+@media (max-width: 380px) {
+  #wrapper #main #stanLee {
+    height: 300px;
+  }
+}
+
 #wrapper #main #stanLee #stanLeeContainer {
   margin: 0 auto;
   width: 100%;
@@ -613,10 +652,46 @@ body {
   }
 }
 
+@media (max-width: 950px) {
+  #wrapper #main #stanLee #stanLeeContainer {
+    height: 400px;
+  }
+}
+
+@media (max-width: 650px) {
+  #wrapper #main #stanLee #stanLeeContainer {
+    height: 280px;
+  }
+}
+
+@media (max-width: 380px) {
+  #wrapper #main #stanLee #stanLeeContainer {
+    height: 200px;
+  }
+}
+
 #wrapper #main #stanLee #stanLeeContainer #stanLeeContainerPic {
   width: 100%;
   height: 560px;
   margin-top: 50px;
+}
+
+@media (max-width: 950px) {
+  #wrapper #main #stanLee #stanLeeContainer #stanLeeContainerPic {
+    height: 400px;
+  }
+}
+
+@media (max-width: 650px) {
+  #wrapper #main #stanLee #stanLeeContainer #stanLeeContainerPic {
+    height: 280px;
+  }
+}
+
+@media (max-width: 380px) {
+  #wrapper #main #stanLee #stanLeeContainer #stanLeeContainerPic {
+    height: 200px;
+  }
 }
 
 #wrapper #main #stanLee #stanLeeContainer #stanLeeContainerPic img {
@@ -627,6 +702,24 @@ body {
 @media (max-width: 1240px) {
   #wrapper #main #stanLee #stanLeeContainer #stanLeeContainerPic img {
     height: 520px;
+  }
+}
+
+@media (max-width: 950px) {
+  #wrapper #main #stanLee #stanLeeContainer #stanLeeContainerPic img {
+    height: 400px;
+  }
+}
+
+@media (max-width: 650px) {
+  #wrapper #main #stanLee #stanLeeContainer #stanLeeContainerPic img {
+    height: 280px;
+  }
+}
+
+@media (max-width: 380px) {
+  #wrapper #main #stanLee #stanLeeContainer #stanLeeContainerPic img {
+    height: 200px;
   }
 }
 
@@ -817,6 +910,23 @@ body {
   display: grid;
   -ms-grid-columns: 1fr 50%;
       grid-template-columns: 1fr 50%;
+}
+
+@media (max-width: 650px) {
+  #wrapper #main #news #newsContainer #newsContainerColumn #feedCards li .feedCardsBlocks .feedCardsBlocksContent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 #wrapper #main #news #newsContainer #newsContainerColumn #feedCards li .feedCardsBlocks .feedCardsBlocksContent .feedCardsBlocksContentPic img {
@@ -1026,6 +1136,12 @@ body {
   -webkit-clip-path: polygon(0 0, 0 99%, 100% 89%, 100% 0);
           clip-path: polygon(0 0, 0 99%, 100% 89%, 100% 0);
   display: table;
+}
+
+@media (max-width: 1680px) {
+  #wrapper #main #mainExplore {
+    background-position-x: 43%;
+  }
 }
 
 #wrapper #main #mainExplore::before {
@@ -1576,6 +1692,12 @@ body {
   display: table;
 }
 
+@media (max-width: 1680px) {
+  #wrapper #main #mainMovies {
+    background-position-x: 43%;
+  }
+}
+
 #wrapper #main #mainMovies::before {
   content: "";
   position: absolute;
@@ -1621,6 +1743,12 @@ body {
   display: table;
 }
 
+@media (max-width: 1680px) {
+  #wrapper #main #mainShows {
+    background-position-x: 74%;
+  }
+}
+
 #wrapper #main #mainShows::before {
   content: "";
   position: absolute;
@@ -1664,6 +1792,12 @@ body {
   -webkit-clip-path: polygon(0 0, 0 99%, 100% 89%, 100% 0);
           clip-path: polygon(0 0, 0 99%, 100% 89%, 100% 0);
   display: table;
+}
+
+@media (max-width: 1680px) {
+  #wrapper #main #mainGames {
+    background-position-x: 69%;
+  }
 }
 
 #wrapper #main #mainGames::before {
@@ -1991,6 +2125,18 @@ body {
       flex-wrap: wrap;
 }
 
+@media (max-width: 950px) {
+  #wrapper #footer .main-footer .main-footer-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 #wrapper #footer .main-footer .main-footer-container .footer-links {
   width: 33%;
   height: auto;
@@ -2007,6 +2153,13 @@ body {
   }
 }
 
+@media (max-width: 950px) {
+  #wrapper #footer .main-footer .main-footer-container .footer-links {
+    width: 100%;
+    margin: 40px 0px;
+  }
+}
+
 #wrapper #footer .main-footer .main-footer-container .footer-links #footerMarvel {
   display: block;
   background-image: url("../img/footerMarvel.PNG");
@@ -2015,6 +2168,12 @@ body {
   width: 70px;
   background-repeat: no-repeat;
   background-position-x: 40%;
+}
+
+@media (max-width: 439px) {
+  #wrapper #footer .main-footer .main-footer-container .footer-links #footerMarvel {
+    display: none;
+  }
 }
 
 #wrapper #footer .main-footer .main-footer-container .footer-links #footer-links-primary #footer-links1 {
@@ -2054,6 +2213,12 @@ body {
 @media (max-width: 1240px) {
   #wrapper #footer .main-footer .main-footer-container .footer-promo-links {
     width: 43%;
+  }
+}
+
+@media (max-width: 950px) {
+  #wrapper #footer .main-footer .main-footer-container .footer-promo-links {
+    display: none;
   }
 }
 
@@ -2099,9 +2264,16 @@ body {
   padding: 0em 4em;
 }
 
-@media (min-width: 850px) and (max-width: 1240px) {
+@media (min-width: 950px) and (max-width: 1240px) {
   #wrapper #footer .main-footer .main-footer-container .footer-follow {
     display: none;
+  }
+}
+
+@media (max-width: 950px) {
+  #wrapper #footer .main-footer .main-footer-container .footer-follow {
+    width: 100%;
+    max-width: 600px;
   }
 }
 
@@ -2167,11 +2339,27 @@ body {
   margin-right: auto;
 }
 
+@media (max-width: 950px) {
+  #wrapper #logReg #formWrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: auto;
+    padding: 0px 5px;
+  }
+}
+
 #wrapper #logReg #formWrapper #formWrapperLeft {
   float: left;
   width: 400px;
   height: auto;
   background-color: #ffffff;
+}
+
+@media (max-width: 950px) {
+  #wrapper #logReg #formWrapper #formWrapperLeft {
+    display: none;
+  }
 }
 
 #wrapper #logReg #formWrapper #formWrapperLeft #formWraperLeftContainer {
@@ -2228,6 +2416,12 @@ body {
   height: 100%;
 }
 
+@media (max-width: 950px) {
+  #wrapper #logReg #formWrapper .formWrapperRight {
+    margin: 0px auto;
+  }
+}
+
 #wrapper #logReg #formWrapper .formWrapperRight .formWraperRightContainer {
   width: 100%;
   height: 100%;
@@ -2252,6 +2446,12 @@ body {
   margin-bottom: 40px;
 }
 
+@media (max-width: 950px) {
+  #wrapper #logReg #formWrapper .formWrapperRight .formWraperRightContainer .formWraperRightContainerContent .signinContent .signinContentTitle {
+    text-align: center;
+  }
+}
+
 #wrapper #logReg #formWrapper .formWrapperRight .formWraperRightContainer .formWraperRightContainerContent .signinContent .formSignin {
   width: 100%;
   height: auto;
@@ -2267,6 +2467,15 @@ body {
       justify-content: space-around;
 }
 
+@media (max-width: 950px) {
+  #wrapper #logReg #formWrapper .formWrapperRight .formWraperRightContainer .formWraperRightContainerContent .signinContent .formSignin #signinform {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 #wrapper #logReg #formWrapper .formWrapperRight .formWraperRightContainer .formWraperRightContainerContent .signinContent .formSignin #signinform input {
   border: 0px;
   width: 100%;
@@ -2276,6 +2485,12 @@ body {
   text-transform: none;
   font-size: 14px;
   color: #202020;
+}
+
+@media (max-width: 950px) {
+  #wrapper #logReg #formWrapper .formWrapperRight .formWraperRightContainer .formWraperRightContainerContent .signinContent .formSignin #signinform input {
+    margin: 10px 0px;
+  }
 }
 
 #wrapper #logReg #formWrapper .formWrapperRight .formWraperRightContainer .formWraperRightContainerContent .signinContent .formSignin .cardButton {
@@ -2697,6 +2912,12 @@ body {
   border-bottom: 2px solid #000;
 }
 
+@media (max-width: 650px) {
+  #wrapper #funkcije .searchBox span {
+    display: none;
+  }
+}
+
 #wrapper #funkcije .searchBox input {
   width: 70%;
   border: none;
@@ -2704,6 +2925,12 @@ body {
   padding-left: 10px;
   font-size: 24px;
   color: #000;
+}
+
+@media (max-width: 650px) {
+  #wrapper #funkcije .searchBox input {
+    width: 90%;
+  }
 }
 
 #wrapper #funkcije .searchBox input::-webkit-input-placeholder {
@@ -2735,7 +2962,8 @@ body {
   height: 50px;
 }
 
-#wrapper #funkcije .sort #sort, #wrapper #funkcije .sort #filter {
+#wrapper #funkcije .sort #sort,
+#wrapper #funkcije .sort #filter {
   width: 120px;
   height: 50px;
   border: none;
@@ -2746,7 +2974,8 @@ body {
   border-bottom: 2px solid #000;
 }
 
-#wrapper #funkcije .sort #sort option, #wrapper #funkcije .sort #filter option {
+#wrapper #funkcije .sort #sort option,
+#wrapper #funkcije .sort #filter option {
   font-weight: bold;
 }
 
@@ -2779,6 +3008,12 @@ body {
           flex-direction: column;
 }
 
+@media (max-width: 950px) {
+  #wrapper .popUp .smallPopLeft {
+    width: 100%;
+  }
+}
+
 #wrapper .popUp .smallPopLeft .smallPopText {
   width: 100%;
   height: 35%;
@@ -2789,6 +3024,19 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media (max-width: 650px) {
+  #wrapper .popUp .smallPopLeft .smallPopText {
+    height: 80%;
+    line-height: 25px;
+  }
+}
+
+@media (max-width: 1240px) {
+  #wrapper .popUp .smallPopLeft .smallPopText p {
+    font-size: 11px;
+  }
 }
 
 #wrapper .popUp .smallPopLeft .smallPopRelatedMovies {
@@ -2804,6 +3052,12 @@ body {
           flex-direction: column;
 }
 
+@media (max-width: 650px) {
+  #wrapper .popUp .smallPopLeft .smallPopRelatedMovies {
+    display: none;
+  }
+}
+
 #wrapper .popUp .smallPopLeft .smallPopRelatedMovies p {
   margin-bottom: 15px;
   text-transform: capitalize;
@@ -2813,11 +3067,13 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 #wrapper .popUp .smallPopLeft .smallPopRelatedMovies .relatedMoviesPics img {
-  min-width: 140px;
-  max-width: 250px;
+  min-width: 100px;
+  max-width: 170px;
   margin: 0px 25px;
 }
 
@@ -2851,6 +3107,12 @@ body {
 #wrapper .popUp .smallPopRight {
   width: 35%;
   height: 100%;
+}
+
+@media (max-width: 950px) {
+  #wrapper .popUp .smallPopRight {
+    display: none;
+  }
 }
 
 #wrapper .popUp .smallPopRight img {
