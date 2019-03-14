@@ -1,4 +1,4 @@
-window.onload = function () {
+window.onload = function() {
 	let url = window.location.href;
 
 	if (url.indexOf('index.html') != -1) {
@@ -22,17 +22,17 @@ window.onload = function () {
 			document.querySelector('.search .logo3').innerHTML = "<a href='index.html'>LOGOUT</a>";
 			pozivanje.removeEventListener('click', pozivanjeForme);
 		}
-		document.querySelector('.search .logo2').addEventListener('click', function () {
+		document.querySelector('.search .logo2').addEventListener('click', function() {
 			localStorage.removeItem('username');
 		});
 
-		document.querySelector('.search .logo3').addEventListener('click', function () {
+		document.querySelector('.search .logo3').addEventListener('click', function() {
 			localStorage.removeItem('username');
 		});
 
 		function hederLista() {
-			var niz = ['explore.html', 'movies.html', 'tv-shows.html', 'games.html'];
-			var niz1 = ['explore', 'movies', 'tv shows', 'games'];
+			var niz = [ 'explore.html', 'movies.html', 'tv-shows.html', 'games.html' ];
+			var niz1 = [ 'explore', 'movies', 'tv shows', 'games' ];
 
 			var divLista = document.getElementById('headerDown');
 			var ispis = "<ul class='HDList'>";
@@ -44,7 +44,7 @@ window.onload = function () {
 		}
 
 		function footerListe() {
-			var lista = ['about marvel', 'marvel fans', 'careers', 'internships'];
+			var lista = [ 'about marvel', 'marvel fans', 'careers', 'internships' ];
 			var divLista = document.getElementById('footer-links-primary');
 			var ispis = "<ul id='footer-links1'>";
 			for (var i = 0; i < lista.length; i++) {
@@ -53,8 +53,8 @@ window.onload = function () {
 			ispis += '</ul>';
 			divLista.innerHTML = ispis;
 			////////////////////////////////////////////////////////////////////////
-			var lista1 = ['scss', 'sitemap', 'author', 'documentation'];
-			var lista11 = ['css/style.scss', 'sitemap.xml', 'porfolio.html', 'documentation.pdf'];
+			var lista1 = [ 'scss', 'sitemap', 'author', 'documentation' ];
+			var lista11 = [ 'css/style.scss', 'sitemap.xml', 'porfolio.html', 'documentation.pdf' ];
 			var divLista1 = document.getElementById('footer-links-secondary');
 			var ispis1 = "<ul id='footer-links2'>";
 			for (var i = 0; i < lista1.length; i++) {
@@ -104,9 +104,9 @@ window.onload = function () {
 
 		function pozivanjeForme() {
 			var headerForma = document.getElementById('headerForma');
-			headerForma.style.visibility === 'hidden' ?
-				(headerForma.style.visibility = 'initial') :
-				(headerForma.style.visibility = 'hidden');
+			headerForma.style.visibility === 'hidden'
+				? (headerForma.style.visibility = 'initial')
+				: (headerForma.style.visibility = 'hidden');
 		}
 
 		function slikeNewsBlock() {
@@ -130,10 +130,10 @@ window.onload = function () {
 				url: 'data/indexFeed.json',
 				method: 'GET',
 				type: 'json',
-				success: function (feed) {
+				success: function(feed) {
 					indexFeed(feed);
 				},
-				error: function (xhr, status, error) {
+				error: function(xhr, status, error) {
 					console.log(xhr);
 					console.log(status);
 					console.log(error);
@@ -144,10 +144,10 @@ window.onload = function () {
 				url: 'data/stanLeeCards.json',
 				method: 'GET',
 				type: 'json',
-				success: function (feed) {
+				success: function(feed) {
 					stanLeeCards(feed);
 				},
-				error: function (xhr, status, error) {
+				error: function(xhr, status, error) {
 					console.log(xhr);
 					console.log(status);
 					console.log(error);
@@ -213,7 +213,7 @@ window.onload = function () {
 			}
 		}
 
-		$(document).ready(function () {
+		$(document).ready(function() {
 			slideShow();
 
 			function slideShow() {
@@ -224,17 +224,19 @@ window.onload = function () {
 				setTimeout(slideShow, 4000);
 			}
 
-			$(function () {
+			$(function() {
 				$('.movieCards').hover(
-					function () {
-						$(this).find('.moviePhoto').stop(true, true).animate({
+					function() {
+						$(this).find('.moviePhoto').stop(true, true).animate(
+							{
 								marginTop: '-=5px'
 							},
 							200
 						);
 					},
-					function () {
-						$(this).find('.moviePhoto').stop(true, true).animate({
+					function() {
+						$(this).find('.moviePhoto').stop(true, true).animate(
+							{
 								marginTop: '+=5px'
 							},
 							200
@@ -243,17 +245,19 @@ window.onload = function () {
 				);
 			});
 
-			$(function () {
+			$(function() {
 				$('.movieCards').hover(
-					function () {
-						$(this).find('.moviePhoto1').stop(true, true).animate({
+					function() {
+						$(this).find('.moviePhoto1').stop(true, true).animate(
+							{
 								marginTop: '-=5px'
 							},
 							200
 						);
 					},
-					function () {
-						$(this).find('.moviePhoto1').stop(true, true).animate({
+					function() {
+						$(this).find('.moviePhoto1').stop(true, true).animate(
+							{
 								marginTop: '+=5px'
 							},
 							200
@@ -263,7 +267,7 @@ window.onload = function () {
 			});
 
 			$('#newsBlockNone').hide();
-			$('.showmore').click(function () {
+			$('.showmore').click(function() {
 				// sakriti/prikazati blok
 				if ($('#newsBlockNone').is(':visible')) {
 					$('#newsBlockNone').slideUp(500);
@@ -294,17 +298,17 @@ window.onload = function () {
 			document.querySelector('.search .logo3').innerHTML = "<a href='index.html'>LOGOUT</a>";
 			pozivanje.removeEventListener('click', pozivanjeForme);
 		}
-		document.querySelector('.search .logo2').addEventListener('click', function () {
+		document.querySelector('.search .logo2').addEventListener('click', function() {
 			localStorage.removeItem('username');
 		});
 
-		document.querySelector('.search .logo3').addEventListener('click', function () {
+		document.querySelector('.search .logo3').addEventListener('click', function() {
 			localStorage.removeItem('username');
 		});
 
 		function hederLista() {
-			var niz = ['explore.html', 'movies.html', 'tv-shows.html', 'games.html'];
-			var niz1 = ['explore', 'movies', 'tv shows', 'games'];
+			var niz = [ 'explore.html', 'movies.html', 'tv-shows.html', 'games.html' ];
+			var niz1 = [ 'explore', 'movies', 'tv shows', 'games' ];
 
 			var divLista = document.getElementById('headerDown');
 			var ispis = "<ul class='HDList'>";
@@ -316,7 +320,7 @@ window.onload = function () {
 		}
 
 		function footerListe() {
-			var lista = ['about marvel', 'marvel fans', 'careers', 'internships'];
+			var lista = [ 'about marvel', 'marvel fans', 'careers', 'internships' ];
 			var divLista = document.getElementById('footer-links-primary');
 			var ispis = "<ul id='footer-links1'>";
 			for (var i = 0; i < lista.length; i++) {
@@ -325,8 +329,8 @@ window.onload = function () {
 			ispis += '</ul>';
 			divLista.innerHTML = ispis;
 			////////////////////////////////////////////////////////////////////////
-			var lista1 = ['scss', 'sitemap', 'author', 'documentation'];
-			var lista11 = ['css/style.scss', 'sitemap.xml', 'porfolio.html', 'documentation.pdf'];
+			var lista1 = [ 'scss', 'sitemap', 'author', 'documentation' ];
+			var lista11 = [ 'css/style.scss', 'sitemap.xml', 'porfolio.html', 'documentation.pdf' ];
 			var divLista1 = document.getElementById('footer-links-secondary');
 			var ispis1 = "<ul id='footer-links2'>";
 			for (var i = 0; i < lista1.length; i++) {
@@ -376,9 +380,9 @@ window.onload = function () {
 
 		function pozivanjeForme() {
 			var headerForma = document.getElementById('headerForma');
-			headerForma.style.visibility === 'hidden' ?
-				(headerForma.style.visibility = 'initial') :
-				(headerForma.style.visibility = 'hidden');
+			headerForma.style.visibility === 'hidden'
+				? (headerForma.style.visibility = 'initial')
+				: (headerForma.style.visibility = 'hidden');
 		}
 	} else if (url.indexOf('avengers.html') != -1) {
 		hederLista();
@@ -400,17 +404,17 @@ window.onload = function () {
 			document.querySelector('.search .logo3').innerHTML = "<a href='index.html'>LOGOUT</a>";
 			pozivanje.removeEventListener('click', pozivanjeForme);
 		}
-		document.querySelector('.search .logo2').addEventListener('click', function () {
+		document.querySelector('.search .logo2').addEventListener('click', function() {
 			localStorage.removeItem('username');
 		});
 
-		document.querySelector('.search .logo3').addEventListener('click', function () {
+		document.querySelector('.search .logo3').addEventListener('click', function() {
 			localStorage.removeItem('username');
 		});
 
 		function hederLista() {
-			var niz = ['explore.html', 'movies.html', 'tv-shows.html', 'games.html'];
-			var niz1 = ['explore', 'movies', 'tv shows', 'games'];
+			var niz = [ 'explore.html', 'movies.html', 'tv-shows.html', 'games.html' ];
+			var niz1 = [ 'explore', 'movies', 'tv shows', 'games' ];
 
 			var divLista = document.getElementById('headerDown');
 			var ispis = "<ul class='HDList'>";
@@ -422,7 +426,7 @@ window.onload = function () {
 		}
 
 		function footerListe() {
-			var lista = ['about marvel', 'marvel fans', 'careers', 'internships'];
+			var lista = [ 'about marvel', 'marvel fans', 'careers', 'internships' ];
 			var divLista = document.getElementById('footer-links-primary');
 			var ispis = "<ul id='footer-links1'>";
 			for (var i = 0; i < lista.length; i++) {
@@ -431,8 +435,8 @@ window.onload = function () {
 			ispis += '</ul>';
 			divLista.innerHTML = ispis;
 			////////////////////////////////////////////////////////////////////////
-			var lista1 = ['scss', 'sitemap', 'author', 'documentation'];
-			var lista11 = ['css/style.scss', 'sitemap.xml', 'porfolio.html', 'documentation.pdf'];
+			var lista1 = [ 'scss', 'sitemap', 'author', 'documentation' ];
+			var lista11 = [ 'css/style.scss', 'sitemap.xml', 'porfolio.html', 'documentation.pdf' ];
 			var divLista1 = document.getElementById('footer-links-secondary');
 			var ispis1 = "<ul id='footer-links2'>";
 			for (var i = 0; i < lista1.length; i++) {
@@ -482,9 +486,9 @@ window.onload = function () {
 
 		function pozivanjeForme() {
 			var headerForma = document.getElementById('headerForma');
-			headerForma.style.visibility === 'hidden' ?
-				(headerForma.style.visibility = 'initial') :
-				(headerForma.style.visibility = 'hidden');
+			headerForma.style.visibility === 'hidden'
+				? (headerForma.style.visibility = 'initial')
+				: (headerForma.style.visibility = 'hidden');
 		}
 
 		function avengersAjax() {
@@ -492,10 +496,10 @@ window.onload = function () {
 				url: 'data/avengersAside.json',
 				method: 'GET',
 				type: 'json',
-				success: function (avg) {
+				success: function(avg) {
 					avengersAside(avg);
 				},
-				error: function (xhr, status, error) {
+				error: function(xhr, status, error) {
 					console.log(xhr);
 					console.log(status);
 					console.log(error);
@@ -541,17 +545,17 @@ window.onload = function () {
 			document.querySelector('.search .logo3').innerHTML = "<a href='index.html'>LOGOUT</a>";
 			pozivanje.removeEventListener('click', pozivanjeForme);
 		}
-		document.querySelector('.search .logo2').addEventListener('click', function () {
+		document.querySelector('.search .logo2').addEventListener('click', function() {
 			localStorage.removeItem('username');
 		});
 
-		document.querySelector('.search .logo3').addEventListener('click', function () {
+		document.querySelector('.search .logo3').addEventListener('click', function() {
 			localStorage.removeItem('username');
 		});
 
 		function hederLista() {
-			var niz = ['explore.html', 'movies.html', 'tv-shows.html', 'games.html'];
-			var niz1 = ['explore', 'movies', 'tv shows', 'games'];
+			var niz = [ 'explore.html', 'movies.html', 'tv-shows.html', 'games.html' ];
+			var niz1 = [ 'explore', 'movies', 'tv shows', 'games' ];
 
 			var divLista = document.getElementById('headerDown');
 			var ispis = "<ul class='HDList'>";
@@ -563,7 +567,7 @@ window.onload = function () {
 		}
 
 		function footerListe() {
-			var lista = ['about marvel', 'marvel fans', 'careers', 'internships'];
+			var lista = [ 'about marvel', 'marvel fans', 'careers', 'internships' ];
 			var divLista = document.getElementById('footer-links-primary');
 			var ispis = "<ul id='footer-links1'>";
 			for (var i = 0; i < lista.length; i++) {
@@ -572,8 +576,8 @@ window.onload = function () {
 			ispis += '</ul>';
 			divLista.innerHTML = ispis;
 			////////////////////////////////////////////////////////////////////////
-			var lista1 = ['scss', 'sitemap', 'author', 'documentation'];
-			var lista11 = ['css/style.scss', 'sitemap.xml', 'porfolio.html', 'documentation.pdf'];
+			var lista1 = [ 'scss', 'sitemap', 'author', 'documentation' ];
+			var lista11 = [ 'css/style.scss', 'sitemap.xml', 'porfolio.html', 'documentation.pdf' ];
 			var divLista1 = document.getElementById('footer-links-secondary');
 			var ispis1 = "<ul id='footer-links2'>";
 			for (var i = 0; i < lista1.length; i++) {
@@ -623,9 +627,9 @@ window.onload = function () {
 
 		function pozivanjeForme() {
 			var headerForma = document.getElementById('headerForma');
-			headerForma.style.visibility === 'hidden' ?
-				(headerForma.style.visibility = 'initial') :
-				(headerForma.style.visibility = 'hidden');
+			headerForma.style.visibility === 'hidden'
+				? (headerForma.style.visibility = 'initial')
+				: (headerForma.style.visibility = 'hidden');
 		}
 
 		function f4Ajax() {
@@ -633,10 +637,10 @@ window.onload = function () {
 				url: 'data/f4Aside.json',
 				method: 'GET',
 				type: 'json',
-				success: function (f4) {
+				success: function(f4) {
 					f4Aside(f4);
 				},
-				error: function (xhr, status, error) {
+				error: function(xhr, status, error) {
 					console.log(xhr);
 					console.log(status);
 					console.log(error);
@@ -682,17 +686,17 @@ window.onload = function () {
 			document.querySelector('.search .logo3').innerHTML = "<a href='index.html'>LOGOUT</a>";
 			pozivanje.removeEventListener('click', pozivanjeForme);
 		}
-		document.querySelector('.search .logo2').addEventListener('click', function () {
+		document.querySelector('.search .logo2').addEventListener('click', function() {
 			localStorage.removeItem('username');
 		});
 
-		document.querySelector('.search .logo3').addEventListener('click', function () {
+		document.querySelector('.search .logo3').addEventListener('click', function() {
 			localStorage.removeItem('username');
 		});
 
 		function hederLista() {
-			var niz = ['explore.html', 'movies.html', 'tv-shows.html', 'games.html'];
-			var niz1 = ['explore', 'movies', 'tv shows', 'games'];
+			var niz = [ 'explore.html', 'movies.html', 'tv-shows.html', 'games.html' ];
+			var niz1 = [ 'explore', 'movies', 'tv shows', 'games' ];
 
 			var divLista = document.getElementById('headerDown');
 			var ispis = "<ul class='HDList'>";
@@ -704,7 +708,7 @@ window.onload = function () {
 		}
 
 		function footerListe() {
-			var lista = ['about marvel', 'marvel fans', 'careers', 'internships'];
+			var lista = [ 'about marvel', 'marvel fans', 'careers', 'internships' ];
 			var divLista = document.getElementById('footer-links-primary');
 			var ispis = "<ul id='footer-links1'>";
 			for (var i = 0; i < lista.length; i++) {
@@ -713,8 +717,8 @@ window.onload = function () {
 			ispis += '</ul>';
 			divLista.innerHTML = ispis;
 			////////////////////////////////////////////////////////////////////////
-			var lista1 = ['scss', 'sitemap', 'author', 'documentation'];
-			var lista11 = ['css/style.scss', 'sitemap.xml', 'porfolio.html', 'documentation.pdf'];
+			var lista1 = [ 'scss', 'sitemap', 'author', 'documentation' ];
+			var lista11 = [ 'css/style.scss', 'sitemap.xml', 'porfolio.html', 'documentation.pdf' ];
 			var divLista1 = document.getElementById('footer-links-secondary');
 			var ispis1 = "<ul id='footer-links2'>";
 			for (var i = 0; i < lista1.length; i++) {
@@ -764,9 +768,9 @@ window.onload = function () {
 
 		function pozivanjeForme() {
 			var headerForma = document.getElementById('headerForma');
-			headerForma.style.visibility === 'hidden' ?
-				(headerForma.style.visibility = 'initial') :
-				(headerForma.style.visibility = 'hidden');
+			headerForma.style.visibility === 'hidden'
+				? (headerForma.style.visibility = 'initial')
+				: (headerForma.style.visibility = 'hidden');
 		}
 
 		function gotgAjax() {
@@ -774,10 +778,10 @@ window.onload = function () {
 				url: 'data/gotgAside.json',
 				method: 'GET',
 				type: 'json',
-				success: function (gotg) {
+				success: function(gotg) {
 					gotgAside(gotg);
 				},
-				error: function (xhr, status, error) {
+				error: function(xhr, status, error) {
 					console.log(xhr);
 					console.log(status);
 					console.log(error);
@@ -822,17 +826,17 @@ window.onload = function () {
 			document.querySelector('.search .logo3').innerHTML = "<a href='index.html'>LOGOUT</a>";
 			pozivanje.removeEventListener('click', pozivanjeForme);
 		}
-		document.querySelector('.search .logo2').addEventListener('click', function () {
+		document.querySelector('.search .logo2').addEventListener('click', function() {
 			localStorage.removeItem('username');
 		});
 
-		document.querySelector('.search .logo3').addEventListener('click', function () {
+		document.querySelector('.search .logo3').addEventListener('click', function() {
 			localStorage.removeItem('username');
 		});
 
 		function hederLista() {
-			var niz = ['explore.html', 'movies.html', 'tv-shows.html', 'games.html'];
-			var niz1 = ['explore', 'movies', 'tv shows', 'games'];
+			var niz = [ 'explore.html', 'movies.html', 'tv-shows.html', 'games.html' ];
+			var niz1 = [ 'explore', 'movies', 'tv shows', 'games' ];
 
 			var divLista = document.getElementById('headerDown');
 			var ispis = "<ul class='HDList'>";
@@ -844,7 +848,7 @@ window.onload = function () {
 		}
 
 		function footerListe() {
-			var lista = ['about marvel', 'marvel fans', 'careers', 'internships'];
+			var lista = [ 'about marvel', 'marvel fans', 'careers', 'internships' ];
 			var divLista = document.getElementById('footer-links-primary');
 			var ispis = "<ul id='footer-links1'>";
 			for (var i = 0; i < lista.length; i++) {
@@ -853,8 +857,8 @@ window.onload = function () {
 			ispis += '</ul>';
 			divLista.innerHTML = ispis;
 			////////////////////////////////////////////////////////////////////////
-			var lista1 = ['scss', 'sitemap', 'author', 'documentation'];
-			var lista11 = ['css/style.scss', 'sitemap.xml', 'porfolio.html', 'documentation.pdf'];
+			var lista1 = [ 'scss', 'sitemap', 'author', 'documentation' ];
+			var lista11 = [ 'css/style.scss', 'sitemap.xml', 'porfolio.html', 'documentation.pdf' ];
 			var divLista1 = document.getElementById('footer-links-secondary');
 			var ispis1 = "<ul id='footer-links2'>";
 			for (var i = 0; i < lista1.length; i++) {
@@ -904,26 +908,26 @@ window.onload = function () {
 
 		function pozivanjeForme() {
 			var headerForma = document.getElementById('headerForma');
-			headerForma.style.visibility === 'hidden' ?
-				(headerForma.style.visibility = 'initial') :
-				(headerForma.style.visibility = 'hidden');
+			headerForma.style.visibility === 'hidden'
+				? (headerForma.style.visibility = 'initial')
+				: (headerForma.style.visibility = 'hidden');
 		}
-		var filmovi = dohvatiSve(filmovi);
+		let filmovi = dohvatiSveFilmove();
 
-		let module = Movies();
+		let moduleMovies = Movies();
 
-		module.getMovies();
+		moduleMovies.getMovies();
 
 		$('.popUp').hide();
 		$.ajax({
 			url: 'data/movies.json',
 			method: 'GET',
 			type: 'json',
-			success: function (filmovi) {
+			success: function(filmovi) {
 				moviesGalerija(filmovi);
 				// moviesGalerijaGore(filmovi);
 			},
-			error: function (xhr, status, error) {
+			error: function(xhr, status, error) {
 				console.log(xhr);
 				console.log(status);
 				console.log(error);
@@ -949,7 +953,7 @@ window.onload = function () {
 
 			document.getElementById('ubaci').innerHTML = html;
 
-			$('.klik1').click(function () {
+			$('.klik1').click(function() {
 				moviesPopUp($(this).attr('data-idf'));
 			});
 		}
@@ -958,7 +962,7 @@ window.onload = function () {
 		document.getElementById('search').addEventListener('keyup', pretragaFilmova);
 		document.getElementById('search').addEventListener('keyup', proveraSearch);
 
-		document.getElementById('sort').addEventListener('change', sortirajFilmove);
+		document.getElementById('sort-film').addEventListener('change', sortirajFilmove);
 		document.getElementById('filter').addEventListener('change', filterFilmova);
 
 		function moviesPopUp(idf) {
@@ -966,7 +970,7 @@ window.onload = function () {
 				url: 'data/movies.json',
 				method: 'GET',
 				type: 'json',
-				success: function (data) {
+				success: function(data) {
 					var film;
 					for (const d of data) {
 						if (d.id == idf) {
@@ -976,7 +980,7 @@ window.onload = function () {
 					}
 					prikaziPop(film);
 				},
-				error: function (xhr, status, error) {
+				error: function(xhr, status, error) {
 					console.log(xhr);
 					console.log(status);
 					console.log(error);
@@ -1017,7 +1021,7 @@ window.onload = function () {
 			$('.popUp').fadeIn('slow');
 
 			$dugme = $('.klik2');
-			$dugme.click(function () {
+			$dugme.click(function() {
 				$('.popUp').fadeOut();
 			});
 		}
@@ -1025,7 +1029,7 @@ window.onload = function () {
 		function pretragaFilmova() {
 			const unos = this.value;
 
-			const filtriraniNiz = filmovi.filter(function (x) {
+			const filtriraniNiz = filmovi.filter(function(x) {
 				if (x.title.toLowerCase().indexOf(unos.trim().toLowerCase()) != -1) {
 					return x;
 				}
@@ -1047,7 +1051,7 @@ window.onload = function () {
 			moviesGalerija(filmovi);
 
 			if (klik == 'a-z') {
-				filmovi.sort(function (a, b) {
+				filmovi.sort(function(a, b) {
 					if (a.alt < b.alt) return -1;
 					if (a.alt > b.alt) return 1;
 					return 0;
@@ -1056,7 +1060,7 @@ window.onload = function () {
 			moviesGalerija(filmovi);
 
 			if (klik == 'z-a') {
-				filmovi.sort(function (a, b) {
+				filmovi.sort(function(a, b) {
 					if (a.alt > b.alt) return -1;
 					if (a.alt < b.alt) return 1;
 					return 0;
@@ -1065,7 +1069,7 @@ window.onload = function () {
 			moviesGalerija(filmovi);
 
 			if (klik == '0') {
-				filmovi.sort(function (a, b) {
+				filmovi.sort(function(a, b) {
 					if (a.id < b.id) return -1;
 					if (a.id > b.id) return 1;
 					return 0;
@@ -1077,28 +1081,28 @@ window.onload = function () {
 		function filterFilmova() {
 			let klik = this.value;
 
-			const filtriraniFilmovi1 = filmovi.filter(function (x) {
+			const filtriraniFilmovi1 = filmovi.filter(function(x) {
 				if (x.phase == klik) {
 					return x;
 				}
 			});
 			moviesGalerija(filtriraniFilmovi1);
 
-			const filtriraniFilmovi2 = filmovi.filter(function (y) {
+			const filtriraniFilmovi2 = filmovi.filter(function(y) {
 				if (y.phase == klik) {
 					return y;
 				}
 			});
 			moviesGalerija(filtriraniFilmovi2);
 
-			const filtriraniFilmovi3 = filmovi.filter(function (z) {
+			const filtriraniFilmovi3 = filmovi.filter(function(z) {
 				if (z.phase == klik) {
 					return z;
 				}
 			});
 			moviesGalerija(filtriraniFilmovi3);
 
-			const filtriraniFilmovi4 = filmovi.filter(function (p) {
+			const filtriraniFilmovi4 = filmovi.filter(function(p) {
 				if (p.phase == klik) {
 					return p;
 				}
@@ -1134,18 +1138,20 @@ window.onload = function () {
 			}
 		}
 
-		$(document).ready(function () {
-			$(function () {
+		$(document).ready(function() {
+			$(function() {
 				$('.movieCards').hover(
-					function () {
-						$(this).find('.moviePhoto').stop(true, true).animate({
+					function() {
+						$(this).find('.moviePhoto').stop(true, true).animate(
+							{
 								marginTop: '-=5px'
 							},
 							200
 						);
 					},
-					function () {
-						$(this).find('.moviePhoto').stop(true, true).animate({
+					function() {
+						$(this).find('.moviePhoto').stop(true, true).animate(
+							{
 								marginTop: '+=5px'
 							},
 							200
@@ -1154,17 +1160,19 @@ window.onload = function () {
 				);
 			});
 
-			$(function () {
+			$(function() {
 				$('.movieCards').hover(
-					function () {
-						$(this).find('.moviePhoto1').stop(true, true).animate({
+					function() {
+						$(this).find('.moviePhoto1').stop(true, true).animate(
+							{
 								marginTop: '-=5px'
 							},
 							200
 						);
 					},
-					function () {
-						$(this).find('.moviePhoto1').stop(true, true).animate({
+					function() {
+						$(this).find('.moviePhoto1').stop(true, true).animate(
+							{
 								marginTop: '+=5px'
 							},
 							200
@@ -1174,7 +1182,7 @@ window.onload = function () {
 			});
 
 			$('#newsBlockNone').hide();
-			$('.showmore').click(function () {
+			$('.showmore').click(function() {
 				// sakriti/prikazati blok
 				if ($('#newsBlockNone').is(':visible')) {
 					$('#newsBlockNone').slideUp(500);
@@ -1187,14 +1195,16 @@ window.onload = function () {
 			});
 		});
 
-		function dohvatiSve(filmovi) {
-			return [{
+		function dohvatiSveFilmove() {
+			return [
+				{
 					id: 1,
 					img: 'img/mc1.jpg',
 					alt: 'spiderman',
 					title: 'Spider-man far from home',
 					'release date': '2019',
-					popUpDescription: ' Peter Parker returns in Spider-Man: Far From Home, the next chapter of the Spider-Man: Homecoming series! Our friendly neighborhood Super Hero decides to join his best friends Ned, MJ, and the rest of the gang on a European vacation. However, Peter’s plan to leave super heroics behind for a few weeks are quickly scrapped when he begrudgingly agrees to help Nick Fury uncover the mystery of several elemental creature attacks, creating havoc across the continent!',
+					popUpDescription:
+						' Peter Parker returns in Spider-Man: Far From Home, the next chapter of the Spider-Man: Homecoming series! Our friendly neighborhood Super Hero decides to join his best friends Ned, MJ, and the rest of the gang on a European vacation. However, Peter’s plan to leave super heroics behind for a few weeks are quickly scrapped when he begrudgingly agrees to help Nick Fury uncover the mystery of several elemental creature attacks, creating havoc across the continent!',
 					mainPhoto: 'img/mc1.jpg',
 					filmovi: {
 						slika1: 'img/mc5.jpg',
@@ -1226,7 +1236,8 @@ window.onload = function () {
 					alt: 'captain marvel',
 					title: 'Captain Marvel',
 					'release date': '2019',
-					popUpDescription: 'In Theaters March 8th, 2019. Directed by Anna Boden and Ryan Fleck. Starring: Brie Larson (Captain Marvel), Samuel L Jackson (Nick Fury), Ben Mendelsohn (Talos), Clark Gregg (Phil Coulson), and Lashana Lynch (Maria Rambeau).',
+					popUpDescription:
+						'In Theaters March 8th, 2019. Directed by Anna Boden and Ryan Fleck. Starring: Brie Larson (Captain Marvel), Samuel L Jackson (Nick Fury), Ben Mendelsohn (Talos), Clark Gregg (Phil Coulson), and Lashana Lynch (Maria Rambeau).',
 					mainPhoto: 'img/mc3.jpg',
 					filmovi: {
 						slika1: 'img/mc1.jpg',
@@ -1242,7 +1253,8 @@ window.onload = function () {
 					alt: 'ant-man and wasp',
 					title: 'Ant-man and Wasp',
 					'release date': '2018',
-					popUpDescription: 'From the Marvel Cinematic Universe comes a new chapter featuring heroes with the astonishing ability to shrink: “Ant-Man and The Wasp.” In the aftermath of “Captain America: Civil War,” Scott Lang (Paul Rudd) grapples with the consequences of his choices as both a Super Hero and a father. As he struggles to rebalance his home life with his responsibilities as Ant-Man, he’s confronted by Hope van Dyne (Evangeline Lilly) and Dr. Hank Pym (Michael Douglas) with an urgent new mission. Scott must once again put on the suit and learn to fight alongside The Wasp as the team works together to uncover secrets from their past.',
+					popUpDescription:
+						'From the Marvel Cinematic Universe comes a new chapter featuring heroes with the astonishing ability to shrink: “Ant-Man and The Wasp.” In the aftermath of “Captain America: Civil War,” Scott Lang (Paul Rudd) grapples with the consequences of his choices as both a Super Hero and a father. As he struggles to rebalance his home life with his responsibilities as Ant-Man, he’s confronted by Hope van Dyne (Evangeline Lilly) and Dr. Hank Pym (Michael Douglas) with an urgent new mission. Scott must once again put on the suit and learn to fight alongside The Wasp as the team works together to uncover secrets from their past.',
 					mainPhoto: 'img/mc4.jpg',
 					filmovi: {
 						slika1: 'img/mc2.jpg',
@@ -1258,7 +1270,8 @@ window.onload = function () {
 					alt: 'avengers infinity war',
 					title: 'Avengers: Infinity War',
 					'release date': '2018',
-					popUpDescription: "An unprecedented cinematic journey ten years in the making and spanning the entire Marvel Cinematic Universe, Marvel Studios' 'Avengers: Infinity War' brings to the screen the ultimate, deadliest showdown of all time. As the Avengers and their allies have continued to protect the world from threats too large for any one hero to handle, a new danger has emerged from the cosmic shadows: Thanos. A despot of intergalactic infamy, his goal is to collect all six Infinity Stones, artifacts of unimaginable power, and use them to inflict his twisted will on all of reality. Everything the Avengers have fought for has led up to this moment - the fate of Earth and existence itself has never been more uncertain.",
+					popUpDescription:
+						"An unprecedented cinematic journey ten years in the making and spanning the entire Marvel Cinematic Universe, Marvel Studios' 'Avengers: Infinity War' brings to the screen the ultimate, deadliest showdown of all time. As the Avengers and their allies have continued to protect the world from threats too large for any one hero to handle, a new danger has emerged from the cosmic shadows: Thanos. A despot of intergalactic infamy, his goal is to collect all six Infinity Stones, artifacts of unimaginable power, and use them to inflict his twisted will on all of reality. Everything the Avengers have fought for has led up to this moment - the fate of Earth and existence itself has never been more uncertain.",
 					mainPhoto: 'img/mc5.jpg',
 					filmovi: {
 						slika1: 'img/mc16.jpg',
@@ -1274,7 +1287,8 @@ window.onload = function () {
 					alt: 'black panther',
 					title: 'Black Panther',
 					'release date': '2018',
-					popUpDescription: 'Marvel Studios’ “Black Panther” follows T’Challa who, after the death of his father, the King of Wakanda, returns home to the isolated, technologically advanced African nation to succeed to the throne and take his rightful place as king. But when a powerful old enemy reappears, T’Challa’s mettle as king—and Black Panther—is tested when he is drawn into a formidable conflict that puts the fate of Wakanda and the entire world at risk. Faced with treachery and danger, the young king must rally his allies and release the full power of Black Panther to defeat his foes and secure the safety of his people and their way of life.',
+					popUpDescription:
+						'Marvel Studios’ “Black Panther” follows T’Challa who, after the death of his father, the King of Wakanda, returns home to the isolated, technologically advanced African nation to succeed to the throne and take his rightful place as king. But when a powerful old enemy reappears, T’Challa’s mettle as king—and Black Panther—is tested when he is drawn into a formidable conflict that puts the fate of Wakanda and the entire world at risk. Faced with treachery and danger, the young king must rally his allies and release the full power of Black Panther to defeat his foes and secure the safety of his people and their way of life.',
 					mainPhoto: 'img/mc6.jpg',
 					filmovi: {
 						slika1: 'img/mc2.jpg',
@@ -1290,7 +1304,8 @@ window.onload = function () {
 					alt: 'ragnarok',
 					title: 'Thor: Ragnarok',
 					'release date': '2017',
-					popUpDescription: 'Thor is imprisoned on the other side of the universe without his mighty hammer and finds himself in a race against time to get back to Asgard to stop Ragnarok—the destruction of his homeworld and the end of Asgardian civilization—at the hands of an all-powerful new threat, the ruthless Hela. But first he must survive a deadly gladiatorial contest that pits him against his former ally and fellow Avenger—the Incredible Hulk!',
+					popUpDescription:
+						'Thor is imprisoned on the other side of the universe without his mighty hammer and finds himself in a race against time to get back to Asgard to stop Ragnarok—the destruction of his homeworld and the end of Asgardian civilization—at the hands of an all-powerful new threat, the ruthless Hela. But first he must survive a deadly gladiatorial contest that pits him against his former ally and fellow Avenger—the Incredible Hulk!',
 					mainPhoto: 'img/mc7.jpg',
 					filmovi: {
 						slika1: 'img/mc13.jpg',
@@ -1306,7 +1321,8 @@ window.onload = function () {
 					alt: 'spiderman',
 					title: 'Spider-Man: Homecoming',
 					'release date': '2017',
-					popUpDescription: 'A young Peter Parker/Spider-Man (Tom Holland), who made his sensational debut in Captain America: Civil War, begins to navigate his newfound identity as the web-slinging super hero in Spider-Man: Homecoming. Thrilled by his experience with the Avengers, Peter returns home, where he lives with his Aunt May (Marisa Tomei), under the watchful eye of his new mentor Tony Stark (Robert Downey, Jr.). Peter tries to fall back into his normal daily routine – distracted by thoughts of proving himself to be more than just your friendly neighborhood Spider-Man – but when the Vulture (Michael Keaton) emerges as a new villain, everything that Peter holds most important will be threatened.',
+					popUpDescription:
+						'A young Peter Parker/Spider-Man (Tom Holland), who made his sensational debut in Captain America: Civil War, begins to navigate his newfound identity as the web-slinging super hero in Spider-Man: Homecoming. Thrilled by his experience with the Avengers, Peter returns home, where he lives with his Aunt May (Marisa Tomei), under the watchful eye of his new mentor Tony Stark (Robert Downey, Jr.). Peter tries to fall back into his normal daily routine – distracted by thoughts of proving himself to be more than just your friendly neighborhood Spider-Man – but when the Vulture (Michael Keaton) emerges as a new villain, everything that Peter holds most important will be threatened.',
 					mainPhoto: 'img/mc8.jpg',
 					filmovi: {
 						slika1: 'img/mc1.jpg',
@@ -1322,7 +1338,8 @@ window.onload = function () {
 					alt: 'gotg',
 					title: 'Guardians of the Galaxy Vol. 2',
 					'release date': '2017',
-					popUpDescription: 'Set to the backdrop of ‘Awesome Mixtape #2,’ Marvel’s Guardians of the Galaxy Vol. 2 continues the team’s adventures as they traverse the outer reaches of the cosmos. The Guardians must fight to keep their newfound family together as they unravel the mysteries of Peter Quill’s true parentage. Old foes become new allies and fan-favorite characters from the classic comics will come to our heroes’ aid as the Marvel cinematic universe continues to expand.',
+					popUpDescription:
+						'Set to the backdrop of ‘Awesome Mixtape #2,’ Marvel’s Guardians of the Galaxy Vol. 2 continues the team’s adventures as they traverse the outer reaches of the cosmos. The Guardians must fight to keep their newfound family together as they unravel the mysteries of Peter Quill’s true parentage. Old foes become new allies and fan-favorite characters from the classic comics will come to our heroes’ aid as the Marvel cinematic universe continues to expand.',
 					mainPhoto: 'img/mc9.jpg',
 					filmovi: {
 						slika1: 'img/mc2.jpg',
@@ -1338,7 +1355,8 @@ window.onload = function () {
 					alt: 'doctor strange',
 					title: 'Doctor Strange',
 					'release date': '2016',
-					popUpDescription: 'From Marvel Studios comes “Doctor Strange,” the story of world-famous neurosurgeon Dr. Stephen Strange whose life changes forever after a horrific car accident robs him of the use of his hands. When traditional medicine fails him, he is forced to look for healing, and hope, in an unlikely place—a mysterious enclave known as Kamar-Taj. He quickly learns that this is not just a center for healing but also the front line of a battle against unseen dark forces bent on destroying our reality. Before long Strange—armed with newly acquired magical powers—is forced to choose whether to return to his life of fortune and status or leave it all behind to defend the world as the most powerful sorcerer in existence.',
+					popUpDescription:
+						'From Marvel Studios comes “Doctor Strange,” the story of world-famous neurosurgeon Dr. Stephen Strange whose life changes forever after a horrific car accident robs him of the use of his hands. When traditional medicine fails him, he is forced to look for healing, and hope, in an unlikely place—a mysterious enclave known as Kamar-Taj. He quickly learns that this is not just a center for healing but also the front line of a battle against unseen dark forces bent on destroying our reality. Before long Strange—armed with newly acquired magical powers—is forced to choose whether to return to his life of fortune and status or leave it all behind to defend the world as the most powerful sorcerer in existence.',
 					mainPhoto: 'img/mc10.jpg',
 					filmovi: {
 						slika1: 'img/mc2.jpg',
@@ -1354,7 +1372,8 @@ window.onload = function () {
 					alt: 'captain america civil war',
 					title: 'Captain America: Civil War',
 					'release date': '2016',
-					popUpDescription: "Marvel’s 'Captain America: Civil War' finds Steve Rogers leading the newly formed team of Avengers in their continued efforts to safeguard humanity. But after another incident involving the Avengers results in collateral damage, political pressure mounts to install a system of accountability, headed by a governing body to oversee and direct the team. The new status quo fractures the Avengers, resulting in two camps—one led by Steve Rogers and his desire for the Avengers to remain free to defend humanity without government interference, and the other following Tony Stark’s surprising decision to support government oversight and accountability.",
+					popUpDescription:
+						"Marvel’s 'Captain America: Civil War' finds Steve Rogers leading the newly formed team of Avengers in their continued efforts to safeguard humanity. But after another incident involving the Avengers results in collateral damage, political pressure mounts to install a system of accountability, headed by a governing body to oversee and direct the team. The new status quo fractures the Avengers, resulting in two camps—one led by Steve Rogers and his desire for the Avengers to remain free to defend humanity without government interference, and the other following Tony Stark’s surprising decision to support government oversight and accountability.",
 					mainPhoto: 'img/mc11.jpg',
 					filmovi: {
 						slika1: 'img/mc13.jpg',
@@ -1370,7 +1389,8 @@ window.onload = function () {
 					alt: 'antman',
 					title: 'Ant-man',
 					'release date': '2015',
-					popUpDescription: "The next evolution of the Marvel Cinematic Universe brings a founding member of The Avengers to the big screen for the first time with Marvel Studios 'Ant-Man.' Armed with the astonishing ability to shrink in scale but increase in strength, master thief Scott Lang must embrace his inner-hero and help his mentor, Doctor Hank Pym, protect the secret behind his spectacular Ant-Man suit from a new generation of towering threats. Against seemingly insurmountable obstacles, Pym and Lang must plan and pull off a heist that will save the world.",
+					popUpDescription:
+						"The next evolution of the Marvel Cinematic Universe brings a founding member of The Avengers to the big screen for the first time with Marvel Studios 'Ant-Man.' Armed with the astonishing ability to shrink in scale but increase in strength, master thief Scott Lang must embrace his inner-hero and help his mentor, Doctor Hank Pym, protect the secret behind his spectacular Ant-Man suit from a new generation of towering threats. Against seemingly insurmountable obstacles, Pym and Lang must plan and pull off a heist that will save the world.",
 					mainPhoto: 'img/mc12.jpg',
 					filmovi: {
 						slika1: 'img/mc4.jpg',
@@ -1386,7 +1406,8 @@ window.onload = function () {
 					alt: 'avengers age of ultron',
 					title: 'Avengers: Age of Ultron',
 					'release date': '2015',
-					popUpDescription: 'Marvel Studios presents “Avengers: Age of Ultron,” the epic follow-up to the biggest Super Hero movie of all time. When Tony Stark tries to jumpstart a dormant peacekeeping program, things go awry and Earth’s Mightiest Heroes, including Iron Man, Captain America, Thor, The Incredible Hulk, Black Widow and Hawkeye, are put to the ultimate test as the fate of the planet hangs in the balance. As the villainous Ultron emerges, it is up to the Avengers to stop him from enacting his terrible plans, and soon uneasy alliances and unexpected action pave the way for an epic and unique global adventure.',
+					popUpDescription:
+						'Marvel Studios presents “Avengers: Age of Ultron,” the epic follow-up to the biggest Super Hero movie of all time. When Tony Stark tries to jumpstart a dormant peacekeeping program, things go awry and Earth’s Mightiest Heroes, including Iron Man, Captain America, Thor, The Incredible Hulk, Black Widow and Hawkeye, are put to the ultimate test as the fate of the planet hangs in the balance. As the villainous Ultron emerges, it is up to the Avengers to stop him from enacting his terrible plans, and soon uneasy alliances and unexpected action pave the way for an epic and unique global adventure.',
 					mainPhoto: 'img/mc13.jpg',
 					filmovi: {
 						slika1: 'img/mc15.jpg',
@@ -1402,7 +1423,8 @@ window.onload = function () {
 					alt: 'guardians of the galaxy',
 					title: 'Guardians of the Galaxy',
 					'release date': '2014',
-					popUpDescription: "An action-packed, epic space adventure, Marvel's 'Guardians of the Galaxy,' expands the Marvel Cinematic Universe into the cosmos, where brash adventurer Peter Quill finds himself the object of an unrelenting bounty hunt after stealing a mysterious orb coveted by Ronan, a powerful villain with ambitions that threaten the entire universe. To evade the ever-persistent Ronan, Quill is forced into an uneasy truce with a quartet of disparate misfits--Rocket, a gun-toting raccoon; Groot, a tree-like humanoid; the deadly and enigmatic Gamora; and the revenge-driven Drax the Destroyer. But when Quill discovers the true power of the orb and the menace it poses to the cosmos, he must do his best to rally his ragtag rivals for a last, desperate stand--with the galaxy's fate in the balance.",
+					popUpDescription:
+						"An action-packed, epic space adventure, Marvel's 'Guardians of the Galaxy,' expands the Marvel Cinematic Universe into the cosmos, where brash adventurer Peter Quill finds himself the object of an unrelenting bounty hunt after stealing a mysterious orb coveted by Ronan, a powerful villain with ambitions that threaten the entire universe. To evade the ever-persistent Ronan, Quill is forced into an uneasy truce with a quartet of disparate misfits--Rocket, a gun-toting raccoon; Groot, a tree-like humanoid; the deadly and enigmatic Gamora; and the revenge-driven Drax the Destroyer. But when Quill discovers the true power of the orb and the menace it poses to the cosmos, he must do his best to rally his ragtag rivals for a last, desperate stand--with the galaxy's fate in the balance.",
 					mainPhoto: 'img/mc14.jpg',
 					filmovi: {
 						slika1: 'img/mc2.jpg',
@@ -1418,7 +1440,8 @@ window.onload = function () {
 					alt: 'captain america the winter soldier',
 					title: 'Captain America: The Winter Soldier',
 					'release date': '2014',
-					popUpDescription: "After the cataclysmic events in New York with The Avengers, Marvel's 'Captain America: The Winter Soldier,' finds Steve Rogers, aka Captain America, living quietly in Washington, D.C. and trying to adjust to the modern world. But when a S.H.I.E.L.D. colleague comes under attack, Steve becomes embroiled in a web of intrigue that threatens to put the world at risk. Joining forces with the Black Widow, Captain America struggles to expose the ever-widening conspiracy while fighting off professional assassins sent to silence him at every turn. When the full scope of the villainous plot is revealed, Captain America and the Black Widow enlist the help of a new ally, the Falcon. However, they soon find themselves up against an unexpected and formidable enemy--the Winter Soldier.",
+					popUpDescription:
+						"After the cataclysmic events in New York with The Avengers, Marvel's 'Captain America: The Winter Soldier,' finds Steve Rogers, aka Captain America, living quietly in Washington, D.C. and trying to adjust to the modern world. But when a S.H.I.E.L.D. colleague comes under attack, Steve becomes embroiled in a web of intrigue that threatens to put the world at risk. Joining forces with the Black Widow, Captain America struggles to expose the ever-widening conspiracy while fighting off professional assassins sent to silence him at every turn. When the full scope of the villainous plot is revealed, Captain America and the Black Widow enlist the help of a new ally, the Falcon. However, they soon find themselves up against an unexpected and formidable enemy--the Winter Soldier.",
 					mainPhoto: 'img/mc15.jpg',
 					filmovi: {
 						slika1: 'img/mc13.jpg',
@@ -1434,7 +1457,8 @@ window.onload = function () {
 					alt: 'thor the dark world',
 					title: 'Thor: The Dark World',
 					'release date': '2013',
-					popUpDescription: "In the aftermath of Marvel's 'Thor' and 'Marvel's The Avengers,' Thor fights to restore order across the cosmos...but an ancient race led by the vengeful Malekith returns to plunge the universe back into darkness. Faced with an enemy that even Odin and Asgard cannot withstand, Thor must embark on his most perilous and personal journey yet, one that will reunite him with Jane Foster and force him to sacrifice everything to save us all.",
+					popUpDescription:
+						"In the aftermath of Marvel's 'Thor' and 'Marvel's The Avengers,' Thor fights to restore order across the cosmos...but an ancient race led by the vengeful Malekith returns to plunge the universe back into darkness. Faced with an enemy that even Odin and Asgard cannot withstand, Thor must embark on his most perilous and personal journey yet, one that will reunite him with Jane Foster and force him to sacrifice everything to save us all.",
 					mainPhoto: 'img/mc16.jpg',
 					filmovi: {
 						slika1: 'img/mc7.jpg',
@@ -1450,7 +1474,8 @@ window.onload = function () {
 					alt: 'iron man 3',
 					title: 'Iron Man 3',
 					'release date': '2013',
-					popUpDescription: "Marvel's 'Iron Man 3' pits brash-but-brilliant industrialist Tony Stark/Iron Man against an enemy whose reach knows no bounds. When Stark finds his personal world destroyed at his enemy's hands, he embarks on a harrowing quest to find those responsible. This journey, at every turn, will test his mettle. With his back against the wall, Stark is left to survive by his own devices, relying on his ingenuity and instincts to protect those closest to him. As he fights his way back, Stark discovers the answer to the question that has secretly haunted him: does the man make the suit or does the suit make the man",
+					popUpDescription:
+						"Marvel's 'Iron Man 3' pits brash-but-brilliant industrialist Tony Stark/Iron Man against an enemy whose reach knows no bounds. When Stark finds his personal world destroyed at his enemy's hands, he embarks on a harrowing quest to find those responsible. This journey, at every turn, will test his mettle. With his back against the wall, Stark is left to survive by his own devices, relying on his ingenuity and instincts to protect those closest to him. As he fights his way back, Stark discovers the answer to the question that has secretly haunted him: does the man make the suit or does the suit make the man",
 					mainPhoto: 'img/mc17.jpg',
 					filmovi: {
 						slika1: 'img/mc18.jpg',
@@ -1466,7 +1491,8 @@ window.onload = function () {
 					alt: 'the avengers',
 					title: 'The Avengers',
 					'release date': '2012',
-					popUpDescription: "Marvel Studios presents in association with Paramount Pictures 'Marvel's The Avengers'--the super hero team up of a lifetime, featuring iconic Marvel super heroes Iron Man, the Incredible Hulk, Thor, Captain America, Hawkeye and Black Widow. When an unexpected enemy emerges that threatens global safety and security, Nick Fury, Director of the international peacekeeping agency known as S.H.I.E.L.D., finds himself in need of a team to pull the world back from the brink of disaster. Spanning the globe, a daring recruitment effort begins.",
+					popUpDescription:
+						"Marvel Studios presents in association with Paramount Pictures 'Marvel's The Avengers'--the super hero team up of a lifetime, featuring iconic Marvel super heroes Iron Man, the Incredible Hulk, Thor, Captain America, Hawkeye and Black Widow. When an unexpected enemy emerges that threatens global safety and security, Nick Fury, Director of the international peacekeeping agency known as S.H.I.E.L.D., finds himself in need of a team to pull the world back from the brink of disaster. Spanning the globe, a daring recruitment effort begins.",
 					mainPhoto: 'img/mc18.jpg',
 					filmovi: {
 						slika1: 'img/mc19.jpg',
@@ -1482,7 +1508,8 @@ window.onload = function () {
 					alt: 'captain america the first avenger',
 					title: 'Captain America: The First Avenger',
 					'release date': '2011',
-					popUpDescription: "Marvel's 'Captain America: The First Avenger' focuses on the early days of the Marvel Universe when Steve Rogers volunteers to participate in an experimental program that turns him into the Super Soldier known as Captain America.",
+					popUpDescription:
+						"Marvel's 'Captain America: The First Avenger' focuses on the early days of the Marvel Universe when Steve Rogers volunteers to participate in an experimental program that turns him into the Super Soldier known as Captain America.",
 					mainPhoto: 'img/mc19.jpg',
 					filmovi: {
 						slika1: 'img/mc18.jpg',
@@ -1498,7 +1525,8 @@ window.onload = function () {
 					alt: 'thor',
 					title: 'Thor',
 					'release date': '2011',
-					popUpDescription: "As the son of Odin, king of the Norse gods, Thor will soon inherit the throne of Asgard from his aging father. However, on the day that he is to be crowned, Thor reacts with brutality when the gods' enemies, the Frost Giants, enter the palace in violation of their treaty. As punishment, Odin banishes Thor to Earth. While Loki, Thor's brother, plots mischief in Asgard, Thor, now stripped of his powers, faces his greatest threat.",
+					popUpDescription:
+						"As the son of Odin, king of the Norse gods, Thor will soon inherit the throne of Asgard from his aging father. However, on the day that he is to be crowned, Thor reacts with brutality when the gods' enemies, the Frost Giants, enter the palace in violation of their treaty. As punishment, Odin banishes Thor to Earth. While Loki, Thor's brother, plots mischief in Asgard, Thor, now stripped of his powers, faces his greatest threat.",
 					mainPhoto: 'img/mc20.jpg',
 					filmovi: {
 						slika1: 'img/mc18.jpg',
@@ -1514,7 +1542,8 @@ window.onload = function () {
 					alt: 'iron man 2',
 					title: 'Iron Man 2',
 					'release date': '2010',
-					popUpDescription: "With the world now aware that he is Iron Man, billionaire inventor Tony Stark faces pressure from all sides to share his technology with the military. He is reluctant to divulge the secrets of his armored suit, fearing the information will fall into the wrong hands. With Pepper Potts and 'Rhodey' Rhodes by his side, Tony must forge new alliances and confront a powerful new enemy.",
+					popUpDescription:
+						"With the world now aware that he is Iron Man, billionaire inventor Tony Stark faces pressure from all sides to share his technology with the military. He is reluctant to divulge the secrets of his armored suit, fearing the information will fall into the wrong hands. With Pepper Potts and 'Rhodey' Rhodes by his side, Tony must forge new alliances and confront a powerful new enemy.",
 					mainPhoto: 'img/mc21.jpg',
 					filmovi: {
 						slika1: 'img/mc23.jpg',
@@ -1530,7 +1559,8 @@ window.onload = function () {
 					alt: 'incredible hulk',
 					title: 'The Incredible Hulk',
 					'release date': '2008',
-					popUpDescription: "In this new beginning, scientist Bruce Banner desperately hunts for a cure to the gamma radiation that poisoned his cells and unleashes the unbridled force of rage within him: The Hulk. Living in the shadows--cut off from a life he knew and the woman he loves, Betty Ross--Banner struggles to avoid the obsessive pursuit of his nemesis, General Thunderbolt Ross and the military machinery that seeks to capture him and brutally exploit his power. As all three grapple with the secrets that led to the Hulk's creation, they are confronted with a monstrous new adversary known as the Abomination, whose destructive strength exceeds even the Hulk's own. One scientist must make an agonizing final choice: accept a peaceful life as Bruce Banner or find heroism in the creature he holds inside--The Incredible Hulk.",
+					popUpDescription:
+						"In this new beginning, scientist Bruce Banner desperately hunts for a cure to the gamma radiation that poisoned his cells and unleashes the unbridled force of rage within him: The Hulk. Living in the shadows--cut off from a life he knew and the woman he loves, Betty Ross--Banner struggles to avoid the obsessive pursuit of his nemesis, General Thunderbolt Ross and the military machinery that seeks to capture him and brutally exploit his power. As all three grapple with the secrets that led to the Hulk's creation, they are confronted with a monstrous new adversary known as the Abomination, whose destructive strength exceeds even the Hulk's own. One scientist must make an agonizing final choice: accept a peaceful life as Bruce Banner or find heroism in the creature he holds inside--The Incredible Hulk.",
 					mainPhoto: 'img/mc22.jpg',
 					filmovi: {
 						slika1: 'img/mc23.jpg',
@@ -1546,7 +1576,8 @@ window.onload = function () {
 					alt: 'iron man',
 					title: 'Iron Man ',
 					'release date': '2008',
-					popUpDescription: "2008's Iron Man tells the story of Tony Stark, a billionaire industrialist and genius inventor who is kidnapped and forced to build a devastating weapon. Instead, using his intelligence and ingenuity, Tony builds a high-tech suit of armor and escapes captivity. When he uncovers a nefarious plot with global implications, he dons his powerful armor and vows to protect the world as Iron Man.",
+					popUpDescription:
+						"2008's Iron Man tells the story of Tony Stark, a billionaire industrialist and genius inventor who is kidnapped and forced to build a devastating weapon. Instead, using his intelligence and ingenuity, Tony builds a high-tech suit of armor and escapes captivity. When he uncovers a nefarious plot with global implications, he dons his powerful armor and vows to protect the world as Iron Man.",
 					mainPhoto: 'img/mc23.jpg',
 					filmovi: {
 						slika1: 'img/mc21.jpg',
@@ -1565,7 +1596,7 @@ window.onload = function () {
 			function getMovies() {
 				$.ajax({
 					url: 'data/movies.json',
-					success: function (data) {
+					success: function(data) {
 						movies = data;
 						popuniMoviesGore();
 					}
@@ -1594,7 +1625,7 @@ window.onload = function () {
 			}
 
 			function pretragaGames(unos) {
-				games = games.filter(function (x) {
+				games = games.filter(function(x) {
 					if (x.title.toLowerCase().indexOf(unos.toLowerCase()) != -1) {
 						return x;
 					}
@@ -1614,10 +1645,10 @@ window.onload = function () {
 		footerInfoSlika();
 		slikeNewsBlock();
 
-		var serije = dohvatiSve(serije);
+		let serije = dohvatiSveSerije();
 
-		let module = TvShows();
-		module.getTvShows();
+		let moduleShows = TvShows();
+		moduleShows.getTvShows();
 
 		var headerForma = document.getElementById('headerForma');
 		headerForma.style.visibility = 'hidden';
@@ -1629,7 +1660,7 @@ window.onload = function () {
 
 		document.getElementById('search').addEventListener('keyup', pretragaSerija);
 		document.getElementById('search').addEventListener('keyup', proveraSearch);
-		document.getElementById('sort').addEventListener('change', sortirajSerije);
+		document.getElementById('sort-serije').addEventListener('change', sortirajSerije);
 		document.getElementById('filter').addEventListener('change', filtrirajSerije);
 
 		if (localStorage.getItem('username')) {
@@ -1638,17 +1669,17 @@ window.onload = function () {
 			document.querySelector('.search .logo3').innerHTML = "<a href='index.html'>LOGOUT</a>";
 			pozivanje.removeEventListener('click', pozivanjeForme);
 		}
-		document.querySelector('.search .logo2').addEventListener('click', function () {
+		document.querySelector('.search .logo2').addEventListener('click', function() {
 			localStorage.removeItem('username');
 		});
 
-		document.querySelector('.search .logo3').addEventListener('click', function () {
+		document.querySelector('.search .logo3').addEventListener('click', function() {
 			localStorage.removeItem('username');
 		});
 
 		function hederLista() {
-			var niz = ['explore.html', 'movies.html', 'tv-shows.html', 'games.html'];
-			var niz1 = ['explore', 'movies', 'tv shows', 'games'];
+			var niz = [ 'explore.html', 'movies.html', 'tv-shows.html', 'games.html' ];
+			var niz1 = [ 'explore', 'movies', 'tv shows', 'games' ];
 
 			var divLista = document.getElementById('headerDown');
 			var ispis = "<ul class='HDList'>";
@@ -1660,7 +1691,7 @@ window.onload = function () {
 		}
 
 		function footerListe() {
-			var lista = ['about marvel', 'marvel fans', 'careers', 'internships'];
+			var lista = [ 'about marvel', 'marvel fans', 'careers', 'internships' ];
 			var divLista = document.getElementById('footer-links-primary');
 			var ispis = "<ul id='footer-links1'>";
 			for (var i = 0; i < lista.length; i++) {
@@ -1669,8 +1700,8 @@ window.onload = function () {
 			ispis += '</ul>';
 			divLista.innerHTML = ispis;
 			////////////////////////////////////////////////////////////////////////
-			var lista1 = ['scss', 'sitemap', 'author', 'documentation'];
-			var lista11 = ['css/style.scss', 'sitemap.xml', 'porfolio.html', 'documentation.pdf'];
+			var lista1 = [ 'scss', 'sitemap', 'author', 'documentation' ];
+			var lista11 = [ 'css/style.scss', 'sitemap.xml', 'porfolio.html', 'documentation.pdf' ];
 			var divLista1 = document.getElementById('footer-links-secondary');
 			var ispis1 = "<ul id='footer-links2'>";
 			for (var i = 0; i < lista1.length; i++) {
@@ -1720,9 +1751,9 @@ window.onload = function () {
 
 		function pozivanjeForme() {
 			var headerForma = document.getElementById('headerForma');
-			headerForma.style.visibility === 'hidden' ?
-				(headerForma.style.visibility = 'initial') :
-				(headerForma.style.visibility = 'hidden');
+			headerForma.style.visibility === 'hidden'
+				? (headerForma.style.visibility = 'initial')
+				: (headerForma.style.visibility = 'hidden');
 		}
 
 		function slikeNewsBlock() {
@@ -1733,14 +1764,16 @@ window.onload = function () {
 			}
 		}
 
-		function dohvatiSve(serije) {
-			return [{
+		function dohvatiSveSerije() {
+			return [
+				{
 					id: 17,
 					img: 'img/s17.jpg',
 					alt: 'agent carter',
 					title: "Marvel's Agent Carter",
 					'release date': '2016',
-					popUpDescription: "Dedicated to the fight against new Atomic Age threats in the wake of World War II, Peggy must now journey from New York City to Los Angeles for her most dangerous assignment yet. But even as she discovers new friends, a new home – perhaps even a new love – she's about to find out that the bright lights of the post-war Hollywood mask a more sinister threat to everyone she is sworn to protect.",
+					popUpDescription:
+						"Dedicated to the fight against new Atomic Age threats in the wake of World War II, Peggy must now journey from New York City to Los Angeles for her most dangerous assignment yet. But even as she discovers new friends, a new home – perhaps even a new love – she's about to find out that the bright lights of the post-war Hollywood mask a more sinister threat to everyone she is sworn to protect.",
 					mainPhoto: 'img/s17.jpg',
 					filmovi: {
 						slika1: 'img/mc5.jpg',
@@ -1756,7 +1789,8 @@ window.onload = function () {
 					alt: 'agents of shield',
 					title: "Marvel's Agents of S.H.I.E.L.D.",
 					'release date': '2019',
-					popUpDescription: 'AGENTS OF S.H.I.E.L.D. <br/><br/>“Marvel’s Agents of S.H.I.E.L.D.” stars Clark Gregg, Ming-Na Wen, Chloe Bennet, Iain De Caestecker, Elizabeth Henstridge, Henry Simmons, Natalia Cordova-Buckley and Jeff Ward.',
+					popUpDescription:
+						'AGENTS OF S.H.I.E.L.D. <br/><br/>“Marvel’s Agents of S.H.I.E.L.D.” stars Clark Gregg, Ming-Na Wen, Chloe Bennet, Iain De Caestecker, Elizabeth Henstridge, Henry Simmons, Natalia Cordova-Buckley and Jeff Ward.',
 					mainPhoto: 'img/s21.jpg',
 					filmovi: {
 						slika1: 'img/mc5.jpg',
@@ -1772,7 +1806,8 @@ window.onload = function () {
 					alt: 'avengers',
 					title: "Marvel's Avengers",
 					'release date': '2018',
-					popUpDescription: 'The Black Panther must decide his loyalties. Is he an Avenger first or King of Wakanda? As the mysterious Shadow Council rises to challenge Wakanda, T’Challa teams up with his sister Shuri to go on missions that no other Avenger can. It’s a globe-trotting journey of espionage and mystery as old foes resurface and new friends are made. In the end, Black Panther must balance defending his home and stopping threats before they start. Is he a sword or shield? Only he can decide.',
+					popUpDescription:
+						'The Black Panther must decide his loyalties. Is he an Avenger first or King of Wakanda? As the mysterious Shadow Council rises to challenge Wakanda, T’Challa teams up with his sister Shuri to go on missions that no other Avenger can. It’s a globe-trotting journey of espionage and mystery as old foes resurface and new friends are made. In the end, Black Panther must balance defending his home and stopping threats before they start. Is he a sword or shield? Only he can decide.',
 					mainPhoto: 'img/s20.jpg',
 					filmovi: {
 						slika1: 'img/mc5.jpg',
@@ -1788,7 +1823,8 @@ window.onload = function () {
 					alt: 'cloak and dagger',
 					title: "Marvel's Cloak and Dagger",
 					'release date': '2019',
-					popUpDescription: 'Marvel’s Cloak & Dagger is the story of Tandy Bowen (Olivia Holt) and Tyrone Johnson (Aubrey Joseph) – two teenagers from very different backgrounds, who find themselves burdened and awakened to newly acquired superpowers which are mysteriously linked to one another. The only constant in their lives is danger and each other.',
+					popUpDescription:
+						'Marvel’s Cloak & Dagger is the story of Tandy Bowen (Olivia Holt) and Tyrone Johnson (Aubrey Joseph) – two teenagers from very different backgrounds, who find themselves burdened and awakened to newly acquired superpowers which are mysteriously linked to one another. The only constant in their lives is danger and each other.',
 					mainPhoto: 'img/s5.jpg',
 					filmovi: {
 						slika1: 'img/mc5.jpg',
@@ -1804,7 +1840,8 @@ window.onload = function () {
 					alt: 'daredevil',
 					title: "Marvel's Daredevil",
 					'release date': '2018',
-					popUpDescription: 'Missing for months, Matt Murdock reemerges a broken man, putting into question his future as both vigilante Daredevil and lawyer Matthew Murdock. But when his archenemy Wilson Fisk is released from prison, Matt must choose between hiding from the world, or embracing his destiny as a hero.',
+					popUpDescription:
+						'Missing for months, Matt Murdock reemerges a broken man, putting into question his future as both vigilante Daredevil and lawyer Matthew Murdock. But when his archenemy Wilson Fisk is released from prison, Matt must choose between hiding from the world, or embracing his destiny as a hero.',
 					mainPhoto: 'img/s1.jpg',
 					filmovi: {
 						slika1: 'img/mc5.jpg',
@@ -1820,7 +1857,8 @@ window.onload = function () {
 					alt: 'the defenders',
 					title: "Marvel's The Defenders",
 					'release date': '2017',
-					popUpDescription: 'Marvel’s The Defenders follows Daredevil AKA Matt Murdock (Charlie Cox), Jessica Jones (Krysten Ritter), Luke Cage (Mike Colter) and Iron Fist AKA Danny Rand (Finn Jones), a quartet of singular heroes with one common goal – to save New York City. This is the story of four solitary figures, burdened with their own personal challenges, who reluctantly realize they just might be stronger when teamed together.',
+					popUpDescription:
+						'Marvel’s The Defenders follows Daredevil AKA Matt Murdock (Charlie Cox), Jessica Jones (Krysten Ritter), Luke Cage (Mike Colter) and Iron Fist AKA Danny Rand (Finn Jones), a quartet of singular heroes with one common goal – to save New York City. This is the story of four solitary figures, burdened with their own personal challenges, who reluctantly realize they just might be stronger when teamed together.',
 					mainPhoto: 'img/s19.jpg',
 					filmovi: {
 						slika1: 'img/mc5.jpg',
@@ -1836,7 +1874,8 @@ window.onload = function () {
 					alt: 'the gifted',
 					title: 'The gifted',
 					'release date': '2018',
-					popUpDescription: "Will you fight for what's right? Stand with the Mutant Underground's Lauren Strucker, Reed Strucker, Caitlin Strucker, Thunderbird, Blink, and Eclipse. Or are you tired of mutants living in the shadows? The Inner Circle's Polaris, Andy Strucker, Esme Frost, and Reeva Payge understands your plight. Season 2 of The Gifted airs Tuesday nights on FOX.",
+					popUpDescription:
+						"Will you fight for what's right? Stand with the Mutant Underground's Lauren Strucker, Reed Strucker, Caitlin Strucker, Thunderbird, Blink, and Eclipse. Or are you tired of mutants living in the shadows? The Inner Circle's Polaris, Andy Strucker, Esme Frost, and Reeva Payge understands your plight. Season 2 of The Gifted airs Tuesday nights on FOX.",
 					mainPhoto: 'img/s7.jpg',
 					filmovi: {
 						slika1: 'img/mc5.jpg',
@@ -1852,7 +1891,8 @@ window.onload = function () {
 					alt: 'guardians of the galaxy',
 					title: "Marvel's Guardians of the Galaxy",
 					'release date': '2018',
-					popUpDescription: 'Breakout! The Guardians of the Galaxy begin their next adventure as they encounter new friends and old foes alike. They gain fame and fortune after arresting Thanos, but are quickly back on their heels after being framed by the Collector. They’ll travel to new universes, stage a massive sting operation inside the Nova Corps, an expose a Secret Invasion years in the making. A little bad and a little good – all in a day’s work.',
+					popUpDescription:
+						'Breakout! The Guardians of the Galaxy begin their next adventure as they encounter new friends and old foes alike. They gain fame and fortune after arresting Thanos, but are quickly back on their heels after being framed by the Collector. They’ll travel to new universes, stage a massive sting operation inside the Nova Corps, an expose a Secret Invasion years in the making. A little bad and a little good – all in a day’s work.',
 					mainPhoto: 'img/s8.jpg',
 					filmovi: {
 						slika1: 'img/mc5.jpg',
@@ -1868,7 +1908,8 @@ window.onload = function () {
 					alt: 'inhumans',
 					title: "Marvel's Inhumans",
 					'release date': '2017',
-					popUpDescription: 'Marvel’s Inhumans explores the epic adventure of the royal family including Black Bolt, the enigmatic, commanding King of the Inhumans, with a voice so powerful that the slightest whisper can destroy a city. After the Royal Family is splintered by a military coup, they barely escape to Hawaii and are greeted with surprising interactions with the lush world around them. Now they must find a way to reunite with each other and return to their home before their way of life is destroyed forever.',
+					popUpDescription:
+						'Marvel’s Inhumans explores the epic adventure of the royal family including Black Bolt, the enigmatic, commanding King of the Inhumans, with a voice so powerful that the slightest whisper can destroy a city. After the Royal Family is splintered by a military coup, they barely escape to Hawaii and are greeted with surprising interactions with the lush world around them. Now they must find a way to reunite with each other and return to their home before their way of life is destroyed forever.',
 					mainPhoto: 'img/s9.jpg',
 					filmovi: {
 						slika1: 'img/mc5.jpg',
@@ -1884,7 +1925,8 @@ window.onload = function () {
 					alt: 'iron fist',
 					title: "Marvel's Iron Fist",
 					'release date': '2018',
-					popUpDescription: 'Danny Rand and Colleen Wing are trying to keep the peace among the many warring gangs. With the help of Misty Knight, they discover that the crime ring in the city goes far deeper than they had ever anticipated and hanging up their swords is no longer an option. Davos returns to NYC after finding his home of K’un-Lun gone. Blaming Danny for its tragic fate, Davos swears to avenge their lost city and reignites a sibling rivalry over the duties linked with wielding the legendary Iron Fist.',
+					popUpDescription:
+						'Danny Rand and Colleen Wing are trying to keep the peace among the many warring gangs. With the help of Misty Knight, they discover that the crime ring in the city goes far deeper than they had ever anticipated and hanging up their swords is no longer an option. Davos returns to NYC after finding his home of K’un-Lun gone. Blaming Danny for its tragic fate, Davos swears to avenge their lost city and reignites a sibling rivalry over the duties linked with wielding the legendary Iron Fist.',
 					mainPhoto: 'img/s10.jpg',
 					filmovi: {
 						slika1: 'img/mc5.jpg',
@@ -1900,7 +1942,8 @@ window.onload = function () {
 					alt: 'jessica jones',
 					title: "Marvel's Jessica Jones",
 					'release date': '2018',
-					popUpDescription: 'After a tragic childhood accident leaves Jessica Jones with incredible strength, she attempts to rebuild her life in New York City as a private investigator, where she is often drawn into cases involving people with extraordinary abilities.',
+					popUpDescription:
+						'After a tragic childhood accident leaves Jessica Jones with incredible strength, she attempts to rebuild her life in New York City as a private investigator, where she is often drawn into cases involving people with extraordinary abilities.',
 					mainPhoto: 'img/s11.jpg',
 					filmovi: {
 						slika1: 'img/mc5.jpg',
@@ -1916,7 +1959,8 @@ window.onload = function () {
 					alt: 'Legion',
 					title: 'Legion',
 					'release date': '2019',
-					popUpDescription: 'Who else but the son of Professor Charles Xavier could possess multiple personalities, spontaneously mutate, or reconstruct reality on a psychic whim? Explore the cerebral conundrum of David Haller, the dangerously unstable mutant known as Legion.',
+					popUpDescription:
+						'Who else but the son of Professor Charles Xavier could possess multiple personalities, spontaneously mutate, or reconstruct reality on a psychic whim? Explore the cerebral conundrum of David Haller, the dangerously unstable mutant known as Legion.',
 					mainPhoto: 'img/s18.jpg',
 					filmovi: {
 						slika1: 'img/mc5.jpg',
@@ -1932,7 +1976,8 @@ window.onload = function () {
 					alt: 'luke cage',
 					title: "Marvel's Luke Cage",
 					'release date': '2018',
-					popUpDescription: 'After a sabotaged experiment leaves him with super strength and unbreakable skin, Luke Cage (Mike Colter) became a fugitive trying to rebuild his life in modern day Harlem, New York City. Now Cage is a free man and reluctant hero struggling to keep Harlem safe in a town where everyone knows his name.',
+					popUpDescription:
+						'After a sabotaged experiment leaves him with super strength and unbreakable skin, Luke Cage (Mike Colter) became a fugitive trying to rebuild his life in modern day Harlem, New York City. Now Cage is a free man and reluctant hero struggling to keep Harlem safe in a town where everyone knows his name.',
 					mainPhoto: 'img/s12.jpg',
 					filmovi: {
 						slika1: 'img/mc5.jpg',
@@ -1948,7 +1993,8 @@ window.onload = function () {
 					alt: 'rising',
 					title: 'Marvel Rising',
 					'release date': '2018',
-					popUpDescription: 'Marvel Rising: Secret Warriors is a long-anticipated event, bringing together Marvel’s newest and beloved characters that have garnered major fan excitement over the last few years. Powered teens Ms. Marvel, Squirrel Girl, Quake, Patriot, America Chavez, and Inferno join forces as an unlikely, but formidable crew of aspiring heroes. When a threat no one could have expected bears down on the Marvel Universe, this ragtag, untrained band of teens have no choice but to rise together.',
+					popUpDescription:
+						'Marvel Rising: Secret Warriors is a long-anticipated event, bringing together Marvel’s newest and beloved characters that have garnered major fan excitement over the last few years. Powered teens Ms. Marvel, Squirrel Girl, Quake, Patriot, America Chavez, and Inferno join forces as an unlikely, but formidable crew of aspiring heroes. When a threat no one could have expected bears down on the Marvel Universe, this ragtag, untrained band of teens have no choice but to rise together.',
 					mainPhoto: 'img/s13.jpg',
 					filmovi: {
 						slika1: 'img/mc5.jpg',
@@ -1964,7 +2010,8 @@ window.onload = function () {
 					alt: 'the punisher',
 					title: "Marvel's The Punisher",
 					'release date': '2019',
-					popUpDescription: 'Former marine-turned-vigilante Frank Castle (Jon Bernthal) has been living a quiet life on the road until he suddenly becomes embroiled in the attempted murder of a young girl (Giorgia Whigham). As he is drawn into the mystery surrounding her and those in pursuit of the information she holds, Castle attracts a new target on his back as new and old enemies force him to confront whether he should accept his destiny and embrace a life as “The Punisher.”',
+					popUpDescription:
+						'Former marine-turned-vigilante Frank Castle (Jon Bernthal) has been living a quiet life on the road until he suddenly becomes embroiled in the attempted murder of a young girl (Giorgia Whigham). As he is drawn into the mystery surrounding her and those in pursuit of the information she holds, Castle attracts a new target on his back as new and old enemies force him to confront whether he should accept his destiny and embrace a life as “The Punisher.”',
 					mainPhoto: 'img/s14.jpg',
 					filmovi: {
 						slika1: 'img/mc5.jpg',
@@ -1980,7 +2027,8 @@ window.onload = function () {
 					alt: 'runaways',
 					title: "Marvel's Runaways",
 					'release date': '2018',
-					popUpDescription: "Runaways have left their homes (and evil parents) behind and now have to learn to live on their own. Our kids begin to realize, for better or worse, they're stuck with each other. And it's up to them to take down Pride once and for all.",
+					popUpDescription:
+						"Runaways have left their homes (and evil parents) behind and now have to learn to live on their own. Our kids begin to realize, for better or worse, they're stuck with each other. And it's up to them to take down Pride once and for all.",
 					mainPhoto: 'img/s15.jpg',
 					filmovi: {
 						slika1: 'img/mc5.jpg',
@@ -1996,7 +2044,8 @@ window.onload = function () {
 					alt: 'spider-man',
 					title: "Marvel's Spider-man",
 					'release date': '2018',
-					popUpDescription: "It’s now Peter Parker’s “sophomore year” and he’s no longer an inexperienced new superhero nor a brand new student at the intimidating Horizon High. But his foes are also no longer inexperienced and his ever-growing Rogue’s Gallery is now again focused on taking Spider-Man down. Picking up where Season One left off, the stakes are much higher in both Peter's personal life and super hero life. Peter must balance working at the Daily Bugle to afford tuition at Horizon High with surviving Doc Ock.",
+					popUpDescription:
+						"It’s now Peter Parker’s “sophomore year” and he’s no longer an inexperienced new superhero nor a brand new student at the intimidating Horizon High. But his foes are also no longer inexperienced and his ever-growing Rogue’s Gallery is now again focused on taking Spider-Man down. Picking up where Season One left off, the stakes are much higher in both Peter's personal life and super hero life. Peter must balance working at the Daily Bugle to afford tuition at Horizon High with surviving Doc Ock.",
 					mainPhoto: 'img/s16.jpg',
 					filmovi: {
 						slika1: 'img/mc5.jpg',
@@ -2015,7 +2064,7 @@ window.onload = function () {
 			function getTvShows() {
 				$.ajax({
 					url: 'data/tvshows.json',
-					success: function (data) {
+					success: function(data) {
 						tvShows = data;
 						popuniTvShowsDole();
 						popuniTvShowsGore();
@@ -2065,7 +2114,7 @@ window.onload = function () {
 			}
 
 			function pretragaGames(unos) {
-				games = games.filter(function (x) {
+				games = games.filter(function(x) {
 					if (x.title.toLowerCase().indexOf(unos.toLowerCase()) != -1) {
 						return x;
 					}
@@ -2083,7 +2132,7 @@ window.onload = function () {
 		function pretragaSerija() {
 			const unos = this.value;
 
-			const filtriraniNiz = serije.filter(function (x) {
+			const filtriraniNiz = serije.filter(function(x) {
 				if (x.title.toLowerCase().indexOf(unos.trim().toLowerCase()) != -1) {
 					return x;
 				}
@@ -2119,7 +2168,7 @@ window.onload = function () {
 			tvShowsGalerija(serije);
 
 			if (klik == 'a-z') {
-				serije.sort(function (a, b) {
+				serije.sort(function(a, b) {
 					if (a.alt < b.alt) return -1;
 					if (a.alt > b.alt) return 1;
 					return 0;
@@ -2128,7 +2177,7 @@ window.onload = function () {
 			tvShowsGalerija(serije);
 
 			if (klik == 'z-a') {
-				serije.sort(function (a, b) {
+				serije.sort(function(a, b) {
 					if (a.alt > b.alt) return -1;
 					if (a.alt < b.alt) return 1;
 					return 0;
@@ -2137,7 +2186,7 @@ window.onload = function () {
 			tvShowsGalerija(serije);
 
 			if (klik == '0') {
-				serije.sort(function (a, b) {
+				serije.sort(function(a, b) {
 					if (a.id < b.id) return -1;
 					if (a.id > b.id) return 1;
 					return 0;
@@ -2149,21 +2198,21 @@ window.onload = function () {
 		function filtrirajSerije() {
 			let klik = this.value;
 
-			const filtriraniFilmovi1 = serije.filter(function (x) {
+			const filtriraniFilmovi1 = serije.filter(function(x) {
 				if (x.phase == klik) {
 					return x;
 				}
 			});
 			tvShowsGalerija(filtriraniFilmovi1);
 
-			const filtriraniFilmovi2 = serije.filter(function (y) {
+			const filtriraniFilmovi2 = serije.filter(function(y) {
 				if (y.phase == klik) {
 					return y;
 				}
 			});
 			tvShowsGalerija(filtriraniFilmovi2);
 
-			const filtriraniFilmovi3 = serije.filter(function (z) {
+			const filtriraniFilmovi3 = serije.filter(function(z) {
 				if (z.phase == klik) {
 					return z;
 				}
@@ -2192,18 +2241,20 @@ window.onload = function () {
 
 			document.getElementById('ubaci').innerHTML = html;
 		}
-		$(document).ready(function () {
-			$(function () {
+		$(document).ready(function() {
+			$(function() {
 				$('.movieCards').hover(
-					function () {
-						$(this).find('.moviePhoto').stop(true, true).animate({
+					function() {
+						$(this).find('.moviePhoto').stop(true, true).animate(
+							{
 								marginTop: '-=5px'
 							},
 							200
 						);
 					},
-					function () {
-						$(this).find('.moviePhoto').stop(true, true).animate({
+					function() {
+						$(this).find('.moviePhoto').stop(true, true).animate(
+							{
 								marginTop: '+=5px'
 							},
 							200
@@ -2212,17 +2263,19 @@ window.onload = function () {
 				);
 			});
 
-			$(function () {
+			$(function() {
 				$('.movieCards').hover(
-					function () {
-						$(this).find('.moviePhoto1').stop(true, true).animate({
+					function() {
+						$(this).find('.moviePhoto1').stop(true, true).animate(
+							{
 								marginTop: '-=5px'
 							},
 							200
 						);
 					},
-					function () {
-						$(this).find('.moviePhoto1').stop(true, true).animate({
+					function() {
+						$(this).find('.moviePhoto1').stop(true, true).animate(
+							{
 								marginTop: '+=5px'
 							},
 							200
@@ -2232,7 +2285,7 @@ window.onload = function () {
 			});
 
 			$('#newsBlockNone').hide();
-			$('.showmore').click(function () {
+			$('.showmore').click(function() {
 				// sakriti/prikazati blok
 				if ($('#newsBlockNone').is(':visible')) {
 					$('#newsBlockNone').slideUp(500);
@@ -2250,9 +2303,9 @@ window.onload = function () {
 		footerInfoSlika();
 		slikeNewsBlock();
 
-		let module = Games();
-		module.getGames();
-		var games = dohvatiSve(games);
+		let moduleGames = Games();
+		moduleGames.getGames();
+		let games = dohvatiSveGames();
 
 		var headerForma = document.getElementById('headerForma');
 		headerForma.style.visibility = 'hidden';
@@ -2268,23 +2321,23 @@ window.onload = function () {
 			document.querySelector('.search .logo3').innerHTML = "<a href='index.html'>LOGOUT</a>";
 			pozivanje.removeEventListener('click', pozivanjeForme);
 		}
-		document.querySelector('.search .logo2').addEventListener('click', function () {
+		document.querySelector('.search .logo2').addEventListener('click', function() {
 			localStorage.removeItem('username');
 		});
 
-		document.querySelector('.search .logo3').addEventListener('click', function () {
+		document.querySelector('.search .logo3').addEventListener('click', function() {
 			localStorage.removeItem('username');
 		});
 
 		document.getElementById('search').addEventListener('keyup', pretragaSerija);
 		// document.getElementById("search").addEventListener("keyup", pretragaGames); // zasto ovo ne radi
 		document.getElementById('search').addEventListener('keyup', proveraSearch);
-		document.getElementById('sort').addEventListener('change', sortirajGames);
+		document.getElementById('sort-games').addEventListener('change', sortirajGames);
 		document.getElementById('filter').addEventListener('change', filtrirajGames);
 
 		function hederLista() {
-			var niz = ['explore.html', 'movies.html', 'tv-shows.html', 'games.html'];
-			var niz1 = ['explore ', 'movies', 'tv shows', 'games'];
+			var niz = [ 'explore.html', 'movies.html', 'tv-shows.html', 'games.html' ];
+			var niz1 = [ 'explore ', 'movies', 'tv shows', 'games' ];
 
 			var divLista = document.getElementById('headerDown');
 			var ispis = "<ul class='HDList'>";
@@ -2296,7 +2349,7 @@ window.onload = function () {
 		}
 
 		function footerListe() {
-			var lista = ['about marvel', 'marvel fans', 'careers', 'internships'];
+			var lista = [ 'about marvel', 'marvel fans', 'careers', 'internships' ];
 			var divLista = document.getElementById('footer-links-primary');
 			var ispis = "<ul id='footer-links1'>";
 			for (var i = 0; i < lista.length; i++) {
@@ -2305,8 +2358,8 @@ window.onload = function () {
 			ispis += '</ul>';
 			divLista.innerHTML = ispis;
 			////////////////////////////////////////////////////////////////////////
-			var lista1 = ['style.scss', 'sitemap', 'author', 'documentation'];
-			var lista11 = ['css/style.scss', 'sitemap.xml', 'porfolio.html', 'documentation.pdf'];
+			var lista1 = [ 'style.scss', 'sitemap', 'author', 'documentation' ];
+			var lista11 = [ 'css/style.scss', 'sitemap.xml', 'porfolio.html', 'documentation.pdf' ];
 			var divLista1 = document.getElementById('footer-links-secondary');
 			var ispis1 = "<ul id='footer-links2'>";
 			for (var i = 0; i < lista1.length; i++) {
@@ -2364,9 +2417,9 @@ window.onload = function () {
 
 		function pozivanjeForme() {
 			var headerForma = document.getElementById('headerForma');
-			headerForma.style.visibility === 'hidden' ?
-				(headerForma.style.visibility = 'initial') :
-				(headerForma.style.visibility = 'hidden');
+			headerForma.style.visibility === 'hidden'
+				? (headerForma.style.visibility = 'initial')
+				: (headerForma.style.visibility = 'hidden');
 		}
 
 		function Games() {
@@ -2375,7 +2428,7 @@ window.onload = function () {
 			function getGames() {
 				$.ajax({
 					url: 'data/games.json',
-					success: function (data) {
+					success: function(data) {
 						games = data;
 						popuniGamesDole();
 						popuniGamesGore();
@@ -2425,7 +2478,7 @@ window.onload = function () {
 			}
 
 			function pretragaGames(unos) {
-				games = games.filter(function (x) {
+				games = games.filter(function(x) {
 					if (x.title.toLowerCase().indexOf(unos.toLowerCase()) != -1) {
 						return x;
 					}
@@ -2440,14 +2493,16 @@ window.onload = function () {
 			};
 		}
 
-		function dohvatiSve(games) {
-			return [{
+		function dohvatiSveGames() {
+			return [
+				{
 					id: 16,
 					img: 'img/gg16.png',
 					alt: 'ultimate alliance',
 					title: 'Marvel Ultimate Alliance',
 					'release date': '2019',
-					popUpDescription: 'Coming Summer 2019. The MARVEL ULTIMATE ALLIANCE series returns for the first time in 10 years—with a new action RPG—exclusively on the Nintendo Switch™ system! Assemble your ultimate team of Marvel Super Heroes from a huge cast including the Avengers, the Guardians of the Galaxy, the X-Men, and more! Team up with friends to prevent galactic devastation at the hands of the mad cosmic tyrant Thanos and his ruthless warmasters, The Black Order.',
+					popUpDescription:
+						'Coming Summer 2019. The MARVEL ULTIMATE ALLIANCE series returns for the first time in 10 years—with a new action RPG—exclusively on the Nintendo Switch™ system! Assemble your ultimate team of Marvel Super Heroes from a huge cast including the Avengers, the Guardians of the Galaxy, the X-Men, and more! Team up with friends to prevent galactic devastation at the hands of the mad cosmic tyrant Thanos and his ruthless warmasters, The Black Order.',
 					mainPhoto: 'img/gg16.png',
 					filmovi: {
 						slika1: 'img/mc5.jpg',
@@ -2463,7 +2518,8 @@ window.onload = function () {
 					alt: 'battle lines',
 					title: 'Marvel Battle Lines',
 					'release date': '2018',
-					popUpDescription: 'The Cosmic Cube has been shattered, plunging the Marvel Universe into chaos! Now, you must join forces with Super Heroes and Villains, including the Avengers, the Guardians of the Galaxy, Spider-Man, and more, to collect the shards and restore the universe. Collect over 100 of your favorite Marvel character playing cards including Captain America, Thor, Daredevil, Venom, Doctor Strange and Thanos. Available on iOS and Android.',
+					popUpDescription:
+						'The Cosmic Cube has been shattered, plunging the Marvel Universe into chaos! Now, you must join forces with Super Heroes and Villains, including the Avengers, the Guardians of the Galaxy, Spider-Man, and more, to collect the shards and restore the universe. Collect over 100 of your favorite Marvel character playing cards including Captain America, Thor, Daredevil, Venom, Doctor Strange and Thanos. Available on iOS and Android.',
 					mainPhoto: 'img/gg1.jpg',
 					filmovi: {
 						slika1: 'img/mc5.jpg',
@@ -2479,7 +2535,8 @@ window.onload = function () {
 					alt: 'spiderman',
 					title: "Marvel's Spider-Man",
 					'release date': '2018',
-					popUpDescription: 'Sony Interactive Entertainment, Insomniac Games, and Marvel have teamed up to create a brand-new and authentic Spider-Man adventure. This isn’t the Spider-Man you’ve met or ever seen before. This is an experienced Peter Parker who’s more masterful at fighting big crime in New York City. At the same time, he’s struggling to balance his chaotic personal life and career while the fate of millions of New Yorkers rest upon his shoulders.',
+					popUpDescription:
+						'Sony Interactive Entertainment, Insomniac Games, and Marvel have teamed up to create a brand-new and authentic Spider-Man adventure. This isn’t the Spider-Man you’ve met or ever seen before. This is an experienced Peter Parker who’s more masterful at fighting big crime in New York City. At the same time, he’s struggling to balance his chaotic personal life and career while the fate of millions of New Yorkers rest upon his shoulders.',
 					mainPhoto: 'img/gg2.jpg',
 					filmovi: {
 						slika1: 'img/mc5.jpg',
@@ -2495,7 +2552,8 @@ window.onload = function () {
 					alt: 'powers united vr',
 					title: 'Marvel Powers United VR',
 					'release date': '2018',
-					popUpDescription: "Unleash your rage and smash foes in VR! Lock 'n load your favorite plasma cannons, or take to the skies with powerful photon blasts. Hulk, Rocket Raccoon, Captain Marvel, and a powerful roster of Marvel’s greatest heroes are ready for battle. Suit up, power up, and team up with friends to engage in immersive, explosive co-op fights from across the Marvel Universe. Be the hero and unleash your powers now!",
+					popUpDescription:
+						"Unleash your rage and smash foes in VR! Lock 'n load your favorite plasma cannons, or take to the skies with powerful photon blasts. Hulk, Rocket Raccoon, Captain Marvel, and a powerful roster of Marvel’s greatest heroes are ready for battle. Suit up, power up, and team up with friends to engage in immersive, explosive co-op fights from across the Marvel Universe. Be the hero and unleash your powers now!",
 					mainPhoto: 'img/gg4.jpg',
 					filmovi: {
 						slika1: 'img/mc5.jpg',
@@ -2511,7 +2569,8 @@ window.onload = function () {
 					alt: 'contest of champions',
 					title: 'Marvel Contest of Champions',
 					'release date': '2018',
-					popUpDescription: "Iron Man vs. Captain America! Hulk vs. Wolverine! Drax vs. Deadpool! The greatest battles in Marvel history are in your hands! The greedy Elder of the Universe known as The Collector has summoned you to a brawl of epic proportions against a line-up of vile villains including Thanos, Kang the Conqueror, and many more! Experience the ultimate free-to-play fighting game on your mobile device… Contest of Champions! Who's on your team?",
+					popUpDescription:
+						"Iron Man vs. Captain America! Hulk vs. Wolverine! Drax vs. Deadpool! The greatest battles in Marvel history are in your hands! The greedy Elder of the Universe known as The Collector has summoned you to a brawl of epic proportions against a line-up of vile villains including Thanos, Kang the Conqueror, and many more! Experience the ultimate free-to-play fighting game on your mobile device… Contest of Champions! Who's on your team?",
 					mainPhoto: 'img/gg5.jpg',
 					filmovi: {
 						slika1: 'img/mc5.jpg',
@@ -2527,7 +2586,8 @@ window.onload = function () {
 					alt: 'future fight',
 					title: 'Marvel Future Fight',
 					'release date': '2017',
-					popUpDescription: 'Players will have access to some of the most beloved Marvel characters including the Avengers, Spider-Man, Daredevil, and the Guardians of the Galaxy, complete with their signature moves and abilities that will allow players to build their own unstoppable team in the fight against well-known villains such as Loki, Doctor Octopus, and Ultron.',
+					popUpDescription:
+						'Players will have access to some of the most beloved Marvel characters including the Avengers, Spider-Man, Daredevil, and the Guardians of the Galaxy, complete with their signature moves and abilities that will allow players to build their own unstoppable team in the fight against well-known villains such as Loki, Doctor Octopus, and Ultron.',
 					mainPhoto: 'img/gg6.jpg',
 					filmovi: {
 						slika1: 'img/mc5.jpg',
@@ -2543,7 +2603,8 @@ window.onload = function () {
 					alt: 'strike force',
 					title: 'Marvel Strike Force',
 					'release date': '2017',
-					popUpDescription: 'Marvel and FoxNext Games team up to bring you “MARVEL Strike Force”! Heroes and villains alike will need to forget their differences and battle side-by-side against one of the biggest threats the world has ever seen: Ultimus. With the Kree Warlord’s sights set on Earth, players will take control of S.T.R.I.K.E.—our primary line of defense against threats like him—put a squad together, and take the fight to Ultimus and his armies.',
+					popUpDescription:
+						'Marvel and FoxNext Games team up to bring you “MARVEL Strike Force”! Heroes and villains alike will need to forget their differences and battle side-by-side against one of the biggest threats the world has ever seen: Ultimus. With the Kree Warlord’s sights set on Earth, players will take control of S.T.R.I.K.E.—our primary line of defense against threats like him—put a squad together, and take the fight to Ultimus and his armies.',
 					mainPhoto: 'img/gg3.jpg',
 					filmovi: {
 						slika1: 'img/mc5.jpg',
@@ -2559,7 +2620,8 @@ window.onload = function () {
 					alt: 'puzzle quest',
 					title: 'Marvel Puzzle Quest',
 					'release date': '2017',
-					popUpDescription: "The best in match-3 puzzle gameplay meets Marvel's biggest Super Heroes and Super Villains in the most epic puzzle adventure game out on your phone, tablet and PC! Marvel Puzzle Quest combines your favorite Marvel characters with deep RPG leveling, player-vs-player tournaments, Alliances, and much more. It's time to unleash your inner Super Hero and wage war against your enemies.",
+					popUpDescription:
+						"The best in match-3 puzzle gameplay meets Marvel's biggest Super Heroes and Super Villains in the most epic puzzle adventure game out on your phone, tablet and PC! Marvel Puzzle Quest combines your favorite Marvel characters with deep RPG leveling, player-vs-player tournaments, Alliances, and much more. It's time to unleash your inner Super Hero and wage war against your enemies.",
 					mainPhoto: 'img/gg7.jpg',
 					filmovi: {
 						slika1: 'img/mc5.jpg',
@@ -2575,7 +2637,8 @@ window.onload = function () {
 					alt: 'avengers academy',
 					title: 'Marvel Avengers Academy',
 					'release date': '2016',
-					popUpDescription: 'Experience the Avengers as you’ve never seen them before! Build the ultimate Super Hero academy, and play as your favorite Avengers characters reimagined as students developing their superpowers. Customize your dream campus, unlock your favorite heroes and villains, navigate their social lives, and go on epic missions.',
+					popUpDescription:
+						'Experience the Avengers as you’ve never seen them before! Build the ultimate Super Hero academy, and play as your favorite Avengers characters reimagined as students developing their superpowers. Customize your dream campus, unlock your favorite heroes and villains, navigate their social lives, and go on epic missions.',
 					mainPhoto: 'img/gg8.jpg',
 					filmovi: {
 						slika1: 'img/mc5.jpg',
@@ -2591,7 +2654,8 @@ window.onload = function () {
 					alt: 'spiderman-man unlimited',
 					title: 'Marvel Spider-Man Unlimited',
 					'release date': '2016',
-					popUpDescription: "Enjoy the thrill of swinging, running, and fighting through a chaotic New York on the brink of destruction, as the formidable Sinister Six attempt to gain unlimited power by opening a malevolent dimensional rift to our world. It's up to Peter Parker and iconic Spider-Man variations such as Iron Spider-Man, Spider-Man Noir, Future Foundation Spider-Man and Ben Reilly Spider-Man to team up and stop them!",
+					popUpDescription:
+						"Enjoy the thrill of swinging, running, and fighting through a chaotic New York on the brink of destruction, as the formidable Sinister Six attempt to gain unlimited power by opening a malevolent dimensional rift to our world. It's up to Peter Parker and iconic Spider-Man variations such as Iron Spider-Man, Spider-Man Noir, Future Foundation Spider-Man and Ben Reilly Spider-Man to team up and stop them!",
 					mainPhoto: 'img/gg9.jpg',
 					filmovi: {
 						slika1: 'img/mc5.jpg',
@@ -2607,7 +2671,8 @@ window.onload = function () {
 					alt: 'lego marvel super heroes 2',
 					title: 'LEGO Marvel Super Heroes 2',
 					'release date': '2016',
-					popUpDescription: 'Bringing together iconic Marvel Super Heroes and Super Villains from different eras and realities, this branching storyline transports players into a cosmic battle across a myriad of Marvel locations ripped from time and space into the incredible open hub world of Chronopolis. Packed with signature LEGO humor for fans of all ages, gamers will go head-to-head with the time-travelling Kang the Conqueror through many imaginative settings in this fun-filled journey spanning the Marvel Universe.',
+					popUpDescription:
+						'Bringing together iconic Marvel Super Heroes and Super Villains from different eras and realities, this branching storyline transports players into a cosmic battle across a myriad of Marvel locations ripped from time and space into the incredible open hub world of Chronopolis. Packed with signature LEGO humor for fans of all ages, gamers will go head-to-head with the time-travelling Kang the Conqueror through many imaginative settings in this fun-filled journey spanning the Marvel Universe.',
 					mainPhoto: 'img/gg10.jpg',
 					filmovi: {
 						slika1: 'img/mc5.jpg',
@@ -2623,7 +2688,8 @@ window.onload = function () {
 					alt: 'marvel cs capcom infinite',
 					title: 'Marvel vs. Capcom: Infinite',
 					'release date': '2016',
-					popUpDescription: 'Marvel vs. Capcom: Infinite features a variety of exciting and accessible single player modes and rich multi-player content for new players and longtime fans alike. In addition to single player Arcade, Training, and Mission modes, a visually stunning and immersive cinematic Story Mode puts players at the center of both universes as they battle for supremacy against powerful forces and a new villain.',
+					popUpDescription:
+						'Marvel vs. Capcom: Infinite features a variety of exciting and accessible single player modes and rich multi-player content for new players and longtime fans alike. In addition to single player Arcade, Training, and Mission modes, a visually stunning and immersive cinematic Story Mode puts players at the center of both universes as they battle for supremacy against powerful forces and a new villain.',
 					mainPhoto: 'img/gg11.jpg',
 					filmovi: {
 						slika1: 'img/mc5.jpg',
@@ -2639,7 +2705,8 @@ window.onload = function () {
 					alt: 'gotg',
 					title: "Marvel's Guardians of the Galaxy: The Telltale Series",
 					'release date': '2016',
-					popUpDescription: "Marvel’s Guardians of the Galaxy: The Telltale Series delivers a brand new story of the universe's unlikeliest heroes, the rag-tag band of outlaws who go by the names Star-Lord, Gamora, Drax, Rocket, and Groot. In the wake of an epic battle, the Guardians discover an artifact of unspeakable power. Each of the Guardians has a reason to desire this relic, as does a ruthless enemy who is the last of her kind, and who will stop at nothing to tear it from their hands.",
+					popUpDescription:
+						"Marvel’s Guardians of the Galaxy: The Telltale Series delivers a brand new story of the universe's unlikeliest heroes, the rag-tag band of outlaws who go by the names Star-Lord, Gamora, Drax, Rocket, and Groot. In the wake of an epic battle, the Guardians discover an artifact of unspeakable power. Each of the Guardians has a reason to desire this relic, as does a ruthless enemy who is the last of her kind, and who will stop at nothing to tear it from their hands.",
 					mainPhoto: 'img/gg12.jpg',
 					filmovi: {
 						slika1: 'img/mc5.jpg',
@@ -2655,7 +2722,8 @@ window.onload = function () {
 					alt: 'pinball',
 					title: 'Marvel Pinball',
 					'release date': '2015',
-					popUpDescription: "Whether it's the Avengers, the Guardians of the Galaxy, Ant-Man, or any of your other favorite Marvel heroes and villains, enjoy pinball action on Zen Studios' digital tables!",
+					popUpDescription:
+						"Whether it's the Avengers, the Guardians of the Galaxy, Ant-Man, or any of your other favorite Marvel heroes and villains, enjoy pinball action on Zen Studios' digital tables!",
 					mainPhoto: 'img/gg13.jpg',
 					filmovi: {
 						slika1: 'img/mc5.jpg',
@@ -2671,7 +2739,8 @@ window.onload = function () {
 					alt: "lego marvel's avengers",
 					title: "LEGO Marvel's Avengers",
 					'release date': '2015',
-					popUpDescription: 'Avengers Assemble! The best-selling LEGO® Marvel videogame franchise returns with a new action-packed Super Hero adventure. Join the LEGO Marvel’s Avengers team and experience the first console videogame featuring characters and storylines from the critically-acclaimed film Marvel’s The Avengers, the blockbuster sequel Marvel’s Avengers: Age of Ultron, and more. Play as the most powerful Super Heroes in their quest to save the world!',
+					popUpDescription:
+						'Avengers Assemble! The best-selling LEGO® Marvel videogame franchise returns with a new action-packed Super Hero adventure. Join the LEGO Marvel’s Avengers team and experience the first console videogame featuring characters and storylines from the critically-acclaimed film Marvel’s The Avengers, the blockbuster sequel Marvel’s Avengers: Age of Ultron, and more. Play as the most powerful Super Heroes in their quest to save the world!',
 					mainPhoto: 'img/gg14.jpg',
 					filmovi: {
 						slika1: 'img/mc5.jpg',
@@ -2687,7 +2756,8 @@ window.onload = function () {
 					alt: 'lego marvel super heroes',
 					title: 'LEGO Marvel Super Heroes',
 					'release date': '2014',
-					popUpDescription: 'LEGO® Marvel Super Heroes features an original story spanning the entire Marvel Universe. Players take control of Iron Man, Spider-Man, the Hulk, Captain America, Wolverine and many more Marvel characters as they unite to stop Loki and a host of other Marvel villains from assembling a super-weapon capable of destroying the world. Players chase down Cosmic Bricks as they travel across LEGO Manhattan and visit key locations from the Marvel Universe like the Avengers’ Helicarrier, Stark Tower, Aste',
+					popUpDescription:
+						'LEGO® Marvel Super Heroes features an original story spanning the entire Marvel Universe. Players take control of Iron Man, Spider-Man, the Hulk, Captain America, Wolverine and many more Marvel characters as they unite to stop Loki and a host of other Marvel villains from assembling a super-weapon capable of destroying the world. Players chase down Cosmic Bricks as they travel across LEGO Manhattan and visit key locations from the Marvel Universe like the Avengers’ Helicarrier, Stark Tower, Aste',
 					mainPhoto: 'img/gg15.jpg',
 					filmovi: {
 						slika1: 'img/mc5.jpg',
@@ -2703,7 +2773,7 @@ window.onload = function () {
 		function pretragaSerija() {
 			const unos = this.value;
 
-			const filtriraniNiz = games.filter(function (x) {
+			const filtriraniNiz = games.filter(function(x) {
 				if (x.title.toLowerCase().indexOf(unos.trim().toLowerCase()) != -1) {
 					return x;
 				}
@@ -2739,7 +2809,7 @@ window.onload = function () {
 			gamesGalerija(games);
 
 			if (klik == 'a-z') {
-				games.sort(function (a, b) {
+				games.sort(function(a, b) {
 					if (a.alt < b.alt) return -1;
 					if (a.alt > b.alt) return 1;
 					return 0;
@@ -2748,7 +2818,7 @@ window.onload = function () {
 			gamesGalerija(games);
 
 			if (klik == 'z-a') {
-				games.sort(function (a, b) {
+				games.sort(function(a, b) {
 					if (a.alt > b.alt) return -1;
 					if (a.alt < b.alt) return 1;
 					return 0;
@@ -2757,7 +2827,7 @@ window.onload = function () {
 			gamesGalerija(games);
 
 			if (klik == '0') {
-				games.sort(function (a, b) {
+				games.sort(function(a, b) {
 					if (a.id < b.id) return -1;
 					if (a.id > b.id) return 1;
 					return 0;
@@ -2769,21 +2839,21 @@ window.onload = function () {
 		function filtrirajGames() {
 			let klik = this.value;
 
-			const filtriraniFilmovi1 = games.filter(function (x) {
+			const filtriraniFilmovi1 = games.filter(function(x) {
 				if (x.phase == klik) {
 					return x;
 				}
 			});
 			gamesGalerija(filtriraniFilmovi1);
 
-			const filtriraniFilmovi2 = games.filter(function (y) {
+			const filtriraniFilmovi2 = games.filter(function(y) {
 				if (y.phase == klik) {
 					return y;
 				}
 			});
 			gamesGalerija(filtriraniFilmovi2);
 
-			const filtriraniFilmovi3 = games.filter(function (z) {
+			const filtriraniFilmovi3 = games.filter(function(z) {
 				if (z.phase == klik) {
 					return z;
 				}
@@ -2819,18 +2889,20 @@ window.onload = function () {
 			module.pretragaGames(unos);
 		}
 
-		$(document).ready(function () {
-			$(function () {
+		$(document).ready(function() {
+			$(function() {
 				$('.movieCards').hover(
-					function () {
-						$(this).find('.moviePhoto').stop(true, true).animate({
+					function() {
+						$(this).find('.moviePhoto').stop(true, true).animate(
+							{
 								marginTop: '-=5px'
 							},
 							200
 						);
 					},
-					function () {
-						$(this).find('.moviePhoto').stop(true, true).animate({
+					function() {
+						$(this).find('.moviePhoto').stop(true, true).animate(
+							{
 								marginTop: '+=5px'
 							},
 							200
@@ -2839,17 +2911,19 @@ window.onload = function () {
 				);
 			});
 
-			$(function () {
+			$(function() {
 				$('.movieCards').hover(
-					function () {
-						$(this).find('.moviePhoto1').stop(true, true).animate({
+					function() {
+						$(this).find('.moviePhoto1').stop(true, true).animate(
+							{
 								marginTop: '-=5px'
 							},
 							200
 						);
 					},
-					function () {
-						$(this).find('.moviePhoto1').stop(true, true).animate({
+					function() {
+						$(this).find('.moviePhoto1').stop(true, true).animate(
+							{
 								marginTop: '+=5px'
 							},
 							200
@@ -2859,7 +2933,7 @@ window.onload = function () {
 			});
 
 			$('#newsBlockNone').hide();
-			$('.showmore').click(function () {
+			$('.showmore').click(function() {
 				if ($('#newsBlockNone').is(':visible')) {
 					$('#newsBlockNone').slideUp(500);
 					$('#showMore').show();
@@ -2874,10 +2948,10 @@ window.onload = function () {
 				url: 'data/games.json',
 				method: 'GET',
 				type: 'json',
-				success: function (games) {
+				success: function(games) {
 					gamesGalerija(games);
 				},
-				error: function (xhr, status, error) {
+				error: function(xhr, status, error) {
 					console.log(xhr);
 					console.log(status);
 					console.log(error);
@@ -2947,8 +3021,6 @@ window.onload = function () {
 		var datum = new Date();
 		var danas = datum.getFullYear();
 
-
-
 		function proveracontinue() {
 			var godinaeror = document.getElementById('registerYear-error');
 			var meseceror = document.getElementById('registerMonth-error');
@@ -2989,7 +3061,6 @@ window.onload = function () {
 		}
 
 		function proveracontinue1() {
-
 			var proveraGreske = [];
 
 			let fname = document.getElementById('fname').value.trim();
@@ -3103,10 +3174,10 @@ window.onload = function () {
 			console.log(validno);
 
 			if (proveraGreske.length == 0) {
-				window.location.href = "index.html"
-				localStorage.setItem("username", user)
+				window.location.href = 'index.html';
+				localStorage.setItem('username', user);
 			} else {
-				proveraGreske = []
+				proveraGreske = [];
 			}
 		}
 	} else if (url.indexOf('singin.html') != -1) {
@@ -3169,17 +3240,17 @@ window.onload = function () {
 			document.querySelector('.search .logo3').innerHTML = "<a href='index.html'>LOGOUT</a>";
 			pozivanje.removeEventListener('click', pozivanjeForme);
 		}
-		document.querySelector('.search .logo2').addEventListener('click', function () {
+		document.querySelector('.search .logo2').addEventListener('click', function() {
 			localStorage.removeItem('username');
 		});
 
-		document.querySelector('.search .logo3').addEventListener('click', function () {
+		document.querySelector('.search .logo3').addEventListener('click', function() {
 			localStorage.removeItem('username');
 		});
 
 		function hederLista() {
-			var niz = ['explore.html', 'movies.html', 'tv-shows.html', 'games.html'];
-			var niz1 = ['explore', 'movies', 'tv shows', 'games'];
+			var niz = [ 'explore.html', 'movies.html', 'tv-shows.html', 'games.html' ];
+			var niz1 = [ 'explore', 'movies', 'tv shows', 'games' ];
 
 			var divLista = document.getElementById('headerDown');
 			var ispis = "<ul class='HDList'>";
@@ -3191,7 +3262,7 @@ window.onload = function () {
 		}
 
 		function footerListe() {
-			var lista = ['about marvel', 'marvel fans', 'careers', 'internships'];
+			var lista = [ 'about marvel', 'marvel fans', 'careers', 'internships' ];
 			var divLista = document.getElementById('footer-links-primary');
 			var ispis = "<ul id='footer-links1'>";
 			for (var i = 0; i < lista.length; i++) {
@@ -3200,8 +3271,8 @@ window.onload = function () {
 			ispis += '</ul>';
 			divLista.innerHTML = ispis;
 			////////////////////////////////////////////////////////////////////////
-			var lista1 = ['scss', 'sitemap', 'author', 'documentation'];
-			var lista11 = ['css/style.scss', 'sitemap.xml', 'porfolio.html', 'documentation.pdf'];
+			var lista1 = [ 'scss', 'sitemap', 'author', 'documentation' ];
+			var lista11 = [ 'css/style.scss', 'sitemap.xml', 'porfolio.html', 'documentation.pdf' ];
 			var divLista1 = document.getElementById('footer-links-secondary');
 			var ispis1 = "<ul id='footer-links2'>";
 			for (var i = 0; i < lista1.length; i++) {
@@ -3251,9 +3322,9 @@ window.onload = function () {
 
 		function pozivanjeForme() {
 			var headerForma = document.getElementById('headerForma');
-			headerForma.style.visibility === 'hidden' ?
-				(headerForma.style.visibility = 'initial') :
-				(headerForma.style.visibility = 'hidden');
+			headerForma.style.visibility === 'hidden'
+				? (headerForma.style.visibility = 'initial')
+				: (headerForma.style.visibility = 'hidden');
 		}
 
 		function slikeNewsBlock() {
@@ -3277,10 +3348,10 @@ window.onload = function () {
 				url: 'data/indexFeed.json',
 				method: 'GET',
 				type: 'json',
-				success: function (feed) {
+				success: function(feed) {
 					indexFeed(feed);
 				},
-				error: function (xhr, status, error) {
+				error: function(xhr, status, error) {
 					console.log(xhr);
 					console.log(status);
 					console.log(error);
@@ -3291,10 +3362,10 @@ window.onload = function () {
 				url: 'data/stanLeeCards.json',
 				method: 'GET',
 				type: 'json',
-				success: function (feed) {
+				success: function(feed) {
 					stanLeeCards(feed);
 				},
-				error: function (xhr, status, error) {
+				error: function(xhr, status, error) {
 					console.log(xhr);
 					console.log(status);
 					console.log(error);
@@ -3360,7 +3431,7 @@ window.onload = function () {
 			}
 		}
 
-		$(document).ready(function () {
+		$(document).ready(function() {
 			slideShow();
 
 			function slideShow() {
@@ -3371,17 +3442,19 @@ window.onload = function () {
 				setTimeout(slideShow, 4000);
 			}
 
-			$(function () {
+			$(function() {
 				$('.movieCards').hover(
-					function () {
-						$(this).find('.moviePhoto').stop(true, true).animate({
+					function() {
+						$(this).find('.moviePhoto').stop(true, true).animate(
+							{
 								marginTop: '-=5px'
 							},
 							200
 						);
 					},
-					function () {
-						$(this).find('.moviePhoto').stop(true, true).animate({
+					function() {
+						$(this).find('.moviePhoto').stop(true, true).animate(
+							{
 								marginTop: '+=5px'
 							},
 							200
@@ -3390,17 +3463,19 @@ window.onload = function () {
 				);
 			});
 
-			$(function () {
+			$(function() {
 				$('.movieCards').hover(
-					function () {
-						$(this).find('.moviePhoto1').stop(true, true).animate({
+					function() {
+						$(this).find('.moviePhoto1').stop(true, true).animate(
+							{
 								marginTop: '-=5px'
 							},
 							200
 						);
 					},
-					function () {
-						$(this).find('.moviePhoto1').stop(true, true).animate({
+					function() {
+						$(this).find('.moviePhoto1').stop(true, true).animate(
+							{
 								marginTop: '+=5px'
 							},
 							200
@@ -3410,7 +3485,7 @@ window.onload = function () {
 			});
 
 			$('#newsBlockNone').hide();
-			$('.showmore').click(function () {
+			$('.showmore').click(function() {
 				// sakriti/prikazati blok
 				if ($('#newsBlockNone').is(':visible')) {
 					$('#newsBlockNone').slideUp(500);
@@ -3423,4 +3498,4 @@ window.onload = function () {
 			});
 		});
 	}
-}
+};
