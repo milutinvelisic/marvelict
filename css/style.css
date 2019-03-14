@@ -1003,7 +1003,7 @@ body {
 }
 
 #wrapper #main #news #newsContainer #newsContainerAside #newsContainerAsideContainer #asideHeader .borderLeftUp path {
-  stroke: #C6A972;
+  stroke: #c6a972;
   stroke-width: 3px;
   fill: none;
   -webkit-mask: url(#mask-2);
@@ -1119,7 +1119,7 @@ body {
 }
 
 #wrapper #main #news #newsContainer #newsContainerAside #newsContainerAsideContainer #asideFooter .borderRightDown path {
-  stroke: #C6A972;
+  stroke: #c6a972;
   stroke-width: 3px;
   fill: none;
   -webkit-mask: url(#mask-2);
@@ -2964,7 +2964,9 @@ body {
   height: 50px;
 }
 
-#wrapper #funkcije .sort #sort,
+#wrapper #funkcije .sort #sort-games,
+#wrapper #funkcije .sort #sort-filmovi,
+#wrapper #funkcije .sort #sort-serije,
 #wrapper #funkcije .sort #filter {
   width: 120px;
   height: 50px;
@@ -2976,7 +2978,9 @@ body {
   border-bottom: 2px solid #000;
 }
 
-#wrapper #funkcije .sort #sort option,
+#wrapper #funkcije .sort #sort-games option,
+#wrapper #funkcije .sort #sort-filmovi option,
+#wrapper #funkcije .sort #sort-serije option,
 #wrapper #funkcije .sort #filter option {
   font-weight: bold;
 }
